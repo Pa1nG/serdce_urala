@@ -1,0 +1,236 @@
+graph TD
+    Start[Начало: Сон о белом коне] --> TrustDream{Довериться сну?}
+    TrustDream -->|Да| VillageMeeting
+    TrustDream -->|Нет| ForestStart
+
+    ForestStart --> VillageRitual
+    VillageRitual --> LoreStone
+    LoreStone --> VillageMeeting
+
+    VillageMeeting --> LessonStars[Урок 1: Навигация по звёздам]
+
+    LessonStars --> StarsChoice{Изучить внимательно?}
+    StarsChoice -->|Да| StarsTest1
+    StarsChoice -->|Нет| StarsSkip
+
+    StarsTest1 --> StarsAnswer1{Провести линию от ковша?}
+    StarsAnswer1 -->|Да| StarsTest2
+    StarsAnswer1 -->|Нет| StarsFail1
+
+    StarsTest2 --> StarsAnswer2{Искать Кассиопею?}
+    StarsAnswer2 -->|Да| StarsTest3
+    StarsAnswer2 -->|Нет| StarsFail2
+
+    StarsTest3 --> StarsAnswer3{Высота Полярной звезды?}
+    StarsAnswer3 -->|55 градусов| StarsSuccess[navigation_stars = True]
+    StarsAnswer3 -->|90 градусов| StarsFail3
+    StarsAnswer3 -->|30 градусов| StarsFail4
+
+    StarsSkip --> StarsFailure[navigation_stars = False]
+
+    StarsSuccess --> MeetSokol
+    StarsFail1 --> MeetSokol
+    StarsFail2 --> MeetSokol
+    StarsFail3 --> MeetSokol
+    StarsFail4 --> MeetSokol
+    StarsFailure --> MeetSokol
+
+    MeetSokol --> LessonRiddles[Урок 2: Загадки и ритм речи]
+
+    LessonRiddles --> Riddle1Choice{Первая загадка}
+    Riddle1Choice -->|Тень| Riddle1Success[speech_rhythm = True]
+    Riddle1Choice -->|Эхо| Riddle1Fail1
+    Riddle1Choice -->|Дым| Riddle1Fail2
+
+    Riddle1Success --> Riddle2Choice{Вторая загадка}
+    Riddle1Fail1 --> Riddle2Skip
+    Riddle1Fail2 --> Riddle2Skip
+
+    Riddle2Choice -->|Дыра| Riddle2Success
+    Riddle2Choice -->|Тень| Riddle2Fail3
+    Riddle2Choice -->|Время| Riddle2Fail4
+
+    Riddle2Success --> Riddle3Choice{Третья загадка}
+    Riddle2Fail3 --> Riddle3Skip
+    Riddle2Fail4 --> Riddle3Skip
+
+    Riddle3Choice -->|Сова| Riddle3Success
+    Riddle3Choice -->|Летучая мышь| Riddle3Fail5
+    Riddle3Choice -->|Ночной цветок| Riddle3Fail6
+
+    Riddle3Success --> RhythmTest
+    Riddle3Fail5 --> RhythmSkip
+    Riddle3Fail6 --> RhythmSkip
+
+    RhythmTest --> RhythmChoice{Повторить с ритмом?}
+    RhythmChoice -->|Да| RhythmTest2
+    RhythmChoice -->|Нет| RhythmFail
+
+    RhythmTest2 --> RhythmAnswer1{Эхо станет невнятным?}
+    RhythmAnswer1 -->|Да| RhythmTest3
+    RhythmAnswer1 -->|Нет| RhythmFail1
+
+    RhythmTest3 --> RhythmAnswer2{Эхо будет прерывистым?}
+    RhythmAnswer2 -->|Да| RhythmSuccess[speech_rhythm = True]
+    RhythmAnswer2 -->|Нет| RhythmFail2
+
+    RhythmSkip --> RhythmFailure[speech_rhythm = False]
+
+    Riddle2Skip --> RhythmFailure
+    Riddle3Skip --> RhythmFailure
+    RhythmFail --> RhythmFailure
+    RhythmFail1 --> RhythmFailure
+    RhythmFail2 --> RhythmFailure
+
+    RhythmSuccess --> PathChoice
+    RhythmFailure --> PathChoice
+
+    PathChoice --> NavigationChoice{Навигация}
+    NavigationChoice -->|По звёздам| StarNavigation
+    NavigationChoice -->|По солнцу| SunNavigation
+
+    StarNavigation --> HasStars{Знает звёзды?}
+    HasStars -->|Да| PathChoiceStars
+    HasStars -->|Нет| NavigationLost
+
+    SunNavigation --> NavigationLost
+
+    NavigationLost --> RiverFord
+    RiverFord --> LessonHerbs
+
+    PathChoiceStars --> RouteChoice{Выбор пути}
+    RouteChoice -->|Гребень| RidgePath
+    RouteChoice -->|Расселина| ValleyPath
+    RouteChoice -->|Пещеры| CavePath
+
+    RidgePath --> LessonHerbs
+    ValleyPath --> LessonHerbs
+    CavePath --> LessonHerbs
+
+    LessonHerbs --> HerbsChoice{Изучить травы?}
+    HerbsChoice -->|Да| HerbsTest1
+    HerbsChoice -->|Нет| HerbsSkip
+
+    HerbsTest1 --> HerbsAnswer1{Самая сильная против огня?}
+    HerbsAnswer1 -->|Сабельник| HerbsTest2
+    HerbsAnswer1 -->|Зверобой| HerbsFail1
+    HerbsAnswer1 -->|Душица| HerbsFail2
+
+    HerbsTest2 --> HerbsAnswer2{Что даёт зверобой?}
+    HerbsAnswer2 -->|Красный сок| HerbsTest3
+    HerbsAnswer2 -->|Зелёный сок| HerbsFail3
+    HerbsAnswer2 -->|Белый сок| HerbsFail4
+
+    HerbsTest3 --> HerbsAnswer3{Какая растёт на солнце?}
+    HerbsAnswer3 -->|Душица| HerbsSuccess[herbs_knowledge = True]
+    HerbsAnswer3 -->|Зверобой| HerbsFail5
+    HerbsAnswer3 -->|Сабельник| HerbsFail6
+
+    HerbsSkip --> HerbsFailure[herbs_knowledge = False]
+
+    HerbsFail1 --> HerbsFailure
+    HerbsFail2 --> HerbsFailure
+    HerbsFail3 --> HerbsFailure
+    HerbsFail4 --> HerbsFailure
+    HerbsFail5 --> HerbsFailure
+    HerbsFail6 --> HerbsFailure
+
+    HerbsSuccess --> RouteContinuation
+    HerbsFailure --> RouteContinuation
+
+    RouteContinuation --> RouteCheck{Route?}
+    RouteCheck -->|Гребень| RidgeContinuation
+    RouteCheck -->|Расселина| ValleyContinuation
+    RouteCheck -->|Пещеры| CaveContinuation
+    RouteCheck -->|Брод| FordContinuation
+
+    RidgeContinuation --> EchoValley
+    ValleyContinuation --> StoneBridge
+    StoneBridge --> BridgeChoice{Мост}
+    BridgeChoice -->|Быстро| EchoValley
+    BridgeChoice -->|Проверить| EchoValley
+
+    CaveContinuation --> CaveChoice{Пещера}
+    CaveChoice -->|Глубже| CaveCollapse[Конец: Обвал]
+    CaveChoice -->|Огонь| EchoValley
+
+    FordContinuation --> StoneBridge
+
+    EchoValley --> EchoChoice{Эхо долины}
+    EchoChoice -->|Использовать ритм| EchoCheck{Has rhythm?}
+    EchoChoice -->|Тихо| EchoQuiet
+
+    EchoCheck -->|Да| EchoSuccess
+    EchoCheck -->|Нет| EchoQuiet
+
+    EchoSuccess --> MoonlitClearing
+    EchoQuiet --> MoonlitClearing
+
+    MoonlitClearing --> DragonBattle
+
+    DragonBattle --> BattleChoice{Стратегия}
+    BattleChoice -->|Эхо| EchoStrategy
+    BattleChoice -->|Травы| HerbsStrategy
+    BattleChoice -->|Сокол| SokolStrategy
+    BattleChoice -->|Лоб в лоб| BruteStrategy
+
+    EchoStrategy --> HasRhythm{Has speech_rhythm?}
+    HasRhythm -->|Да| DragonVictory
+    HasRhythm -->|Нет| DragonDefeat
+
+    HerbsStrategy --> HasHerbs{Has herbs_knowledge?}
+    HasHerbs -->|Да| DragonVictory
+    HasHerbs -->|Нет| DragonDefeat
+
+    SokolStrategy --> DragonVictory
+
+    BruteStrategy --> VictoryScore{Check skills}
+    VictoryScore -->|>=1 skill| DragonVictory
+    VictoryScore -->|0 skills| DragonDefeat
+
+    DragonVictory --> FeatherDoubt
+
+    DragonDefeat --> DefeatPaths
+
+    DefeatPaths --> RetryChoice{Повторить уроки?}
+    RetryChoice -->|Навигация| LessonStars
+    RetryChoice -->|Загадки| LessonRiddles
+    RetryChoice -->|Травы| LessonHerbs
+    RetryChoice -->|Снова в бой| DragonBattle
+
+    FeatherDoubt --> FeatherChoice{Взять перо?}
+    FeatherChoice -->|Да| ChooseEnding
+    FeatherChoice -->|Нет| GameEnd1[Конец: Отступление]
+
+    ChooseEnding --> EndingLogic{Check conditions}
+    EndingLogic -->|Все уроки пройдены| EndingHarmony
+    EndingLogic -->|Гребень без навигации| EndingFall
+    EndingLogic -->|Нет знаний| EndingLost
+    EndingLogic -->|Без навигации| EndingSolo
+    EndingLogic -->|Навигация + не пещера| EndingPathfinders
+    EndingLogic -->|Иначе| EndingReflection
+
+    EndingHarmony --> GameEnd2[Конец: Гармония]
+    EndingFall --> GameEnd3[Конец: Падение]
+    EndingLost --> GameEnd4[Конец: Заблудилась]
+    EndingSolo --> GameEnd5[Конец: Одинокий путь]
+    EndingPathfinders --> GameEnd6[Конец: Следопыты]
+    EndingReflection --> GameEnd7[Конец: Размышление]
+
+    style Start fill:#e1f5fe
+    style EndingHarmony fill:#c8e6c9
+    style EndingFall fill:#ffcdd2
+    style EndingLost fill:#ffcdd2
+    style EndingSolo fill:#fff9c4
+    style EndingPathfinders fill:#c8e6c9
+    style EndingReflection fill:#f3e5f5
+    style DragonVictory fill:#c8e6c9
+    style DragonDefeat fill:#ffcdd2
+    style GameEnd1 fill:#e0e0e0
+    style GameEnd2 fill:#c8e6c9
+    style GameEnd3 fill:#ffcdd2
+    style GameEnd4 fill:#ffcdd2
+    style GameEnd5 fill:#fff9c4
+    style GameEnd6 fill:#c8e6c9
+    style GameEnd7 fill:#f3e5f5
+

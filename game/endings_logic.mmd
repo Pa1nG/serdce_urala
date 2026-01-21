@@ -1,0 +1,11 @@
+flowchart TD
+    Feather[Перо Памяти взято] --> Check{Условия концовки}
+    Check -->|Все уроки пройдены| Harmony[Конец: Гармония]
+    Check -->|Гребень без навигации| Fall[Конец: Падение]
+    Check -->|Нет знаний| Lost[Конец: Заблудилась]
+    Check -->|Без навигации| Solo[Конец: Одинокий путь]
+    Check -->|Навигация + не пещера| Pathfinders[Конец: Следопыты]
+    Check -->|Иначе| Reflection[Конец: Размышление]
+
+    classDef ending fill:#e8eaf6,stroke:#1a237e,stroke-width:2px
+    class Harmony,Fall,Lost,Solo,Pathfinders,Reflection ending

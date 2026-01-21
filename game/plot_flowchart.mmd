@@ -1,0 +1,1731 @@
+```mermaid
+flowchart TD
+    %% НАЧАЛО
+    Start[🌙 Сон о белом коне] --> Choice1{Довериться сну?}
+    Choice1 -->|Да| Village[🏘️ Деревня и старейшина]
+    Choice1 -->|Нет| Forest[🌲 Лесной путь]
+
+    Forest --> Village
+    Village --> Stars[⭐ Урок 1: Навигация по звёздам]
+
+    %% УРОК ЗВЁЗД
+    Stars --> StarsTest{Изучить внимательно?}
+    StarsTest -->|Да| StarsDeep[Глубокое изучение]
+    StarsTest -->|Нет| StarsShallow[Поверхностное]
+
+    StarsDeep --> StarsQuiz1{Тест: Линия от ковша?}
+    StarsQuiz1 -->|Да ✅| StarsQuiz2{Тест: Кассиопея?}
+    StarsQuiz1 -->|Нет ❌| StarsFail1
+
+    StarsQuiz2 -->|Да ✅| StarsQuiz3{Тест: Высота 55°?}
+    StarsQuiz2 -->|Нет ❌| StarsFail2
+
+    StarsQuiz3 -->|Да ✅| StarsSuccess[Знает навигацию]
+    StarsQuiz3 -->|Нет ❌| StarsFail3
+
+    StarsShallow --> StarsFail4[Не знает навигацию]
+
+    %% СОКОЛ И ЗАГАДКИ
+    StarsSuccess --> Sokol[🦅 Встреча с Соколом]
+    StarsFail1 --> Sokol
+    StarsFail2 --> Sokol
+    StarsFail3 --> Sokol
+    StarsFail4 --> Sokol
+
+    Sokol --> Riddles[🧩 Урок 2: Загадки и ритм]
+
+    Riddles --> Riddle1{Загадка 1: Тень/Эхо/Дым}
+    Riddle1 -->|Тень ✅| Riddle2{Загадка 2: Дыра}
+    Riddle1 -->|Эхо/Дым ❌| RiddleFail1
+
+    Riddle2 -->|Дыра ✅| Riddle3{Загадка 3: Сова}
+    Riddle2 -->|Другие ❌| RiddleFail2
+
+    Riddle3 -->|Сова ✅| RhythmTest[Тест ритма]
+    Riddle3 -->|Другие ❌| RiddleFail3
+
+    RhythmTest --> RhythmChoice{Повторить с ритмом?}
+    RhythmChoice -->|Да ✅| RhythmSuccess[Знает ритм речи]
+    RhythmChoice -->|Нет ❌| RhythmFail4
+
+    RiddleFail1 --> RhythmFail5[Не знает ритм]
+    RiddleFail2 --> RhythmFail6[Не знает ритм]
+    RiddleFail3 --> RhythmFail7[Не знает ритм]
+    RhythmFail4 --> RhythmFail8[Не знает ритм]
+    RhythmFail5 --> RhythmFail9[Не знает ритм]
+    RhythmFail6 --> RhythmFail10[Не знает ритм]
+    RhythmFail7 --> RhythmFail11[Не знает ритм]
+    RhythmFail8 --> RhythmFail12[Не знает ритм]
+    RhythmFail9 --> RhythmFail13[Не знает ритм]
+    RhythmFail10 --> RhythmFail14[Не знает ритм]
+    RhythmFail11 --> RhythmFail15[Не знает ритм]
+    RhythmFail12 --> RhythmFail16[Не знает ритм]
+    RhythmFail13 --> RhythmFail17[Не знает ритм]
+    RhythmFail14 --> RhythmFail18[Не знает ритм]
+    RhythmFail15 --> RhythmFail19[Не знает ритм]
+    RhythmFail16 --> RhythmFail20[Не знает ритм]
+    RhythmFail17 --> RhythmFail21[Не знает ритм]
+    RhythmFail18 --> RhythmFail22[Не знает ритм]
+    RhythmFail19 --> RhythmFail23[Не знает ритм]
+    RhythmFail20 --> RhythmFail24[Не знает ритм]
+    RhythmFail21 --> RhythmFail25[Не знает ритм]
+    RhythmFail22 --> RhythmFail26[Не знает ритм]
+    RhythmFail23 --> RhythmFail27[Не знает ритм]
+    RhythmFail24 --> RhythmFail28[Не знает ритм]
+    RhythmFail25 --> RhythmFail29[Не знает ритм]
+    RhythmFail26 --> RhythmFail30[Не знает ритм]
+    RhythmFail27 --> RhythmFail31[Не знает ритм]
+    RhythmFail28 --> RhythmFail32[Не знает ритм]
+    RhythmFail29 --> RhythmFail33[Не знает ритм]
+    RhythmFail30 --> RhythmFail34[Не знает ритм]
+    RhythmFail31 --> RhythmFail35[Не знает ритм]
+    RhythmFail32 --> RhythmFail36[Не знает ритм]
+    RhythmFail33 --> RhythmFail37[Не знает ритм]
+    RhythmFail34 --> RhythmFail38[Не знает ритм]
+    RhythmFail35 --> RhythmFail39[Не знает ритм]
+    RhythmFail36 --> RhythmFail40[Не знает ритм]
+    RhythmFail37 --> RhythmFail41[Не знает ритм]
+    RhythmFail38 --> RhythmFail42[Не знает ритм]
+    RhythmFail39 --> RhythmFail43[Не знает ритм]
+    RhythmFail40 --> RhythmFail44[Не знает ритм]
+    RhythmFail41 --> RhythmFail45[Не знает ритм]
+    RhythmFail42 --> RhythmFail46[Не знает ритм]
+    RhythmFail43 --> RhythmFail47[Не знает ритм]
+    RhythmFail44 --> RhythmFail48[Не знает ритм]
+    RhythmFail45 --> RhythmFail49[Не знает ритм]
+    RhythmFail46 --> RhythmFail50[Не знает ритм]
+    RhythmFail47 --> RhythmFail51[Не знает ритм]
+    RhythmFail48 --> RhythmFail52[Не знает ритм]
+    RhythmFail49 --> RhythmFail53[Не знает ритм]
+    RhythmFail50 --> RhythmFail54[Не знает ритм]
+    RhythmFail51 --> RhythmFail55[Не знает ритм]
+    RhythmFail52 --> RhythmFail56[Не знает ритм]
+    RhythmFail53 --> RhythmFail57[Не знает ритм]
+    RhythmFail54 --> RhythmFail58[Не знает ритм]
+    RhythmFail55 --> RhythmFail59[Не знает ритм]
+    RhythmFail56 --> RhythmFail60[Не знает ритм]
+    RhythmFail57 --> RhythmFail61[Не знает ритм]
+    RhythmFail58 --> RhythmFail62[Не знает ритм]
+    RhythmFail59 --> RhythmFail63[Не знает ритм]
+    RhythmFail60 --> RhythmFail64[Не знает ритм]
+    RhythmFail61 --> RhythmFail65[Не знает ритм]
+    RhythmFail62 --> RhythmFail66[Не знает ритм]
+    RhythmFail63 --> RhythmFail67[Не знает ритм]
+    RhythmFail64 --> RhythmFail68[Не знает ритм]
+    RhythmFail65 --> RhythmFail69[Не знает ритм]
+    RhythmFail66 --> RhythmFail70[Не знает ритм]
+    RhythmFail67 --> RhythmFail71[Не знает ритм]
+    RhythmFail68 --> RhythmFail72[Не знает ритм]
+    RhythmFail69 --> RhythmFail73[Не знает ритм]
+    RhythmFail70 --> RhythmFail74[Не знает ритм]
+    RhythmFail71 --> RhythmFail75[Не знает ритм]
+    RhythmFail72 --> RhythmFail76[Не знает ритм]
+    RhythmFail73 --> RhythmFail77[Не знает ритм]
+    RhythmFail74 --> RhythmFail78[Не знает ритм]
+    RhythmFail75 --> RhythmFail79[Не знает ритм]
+    RhythmFail76 --> RhythmFail80[Не знает ритм]
+    RhythmFail77 --> RhythmFail81[Не знает ритм]
+    RhythmFail78 --> RhythmFail82[Не знает ритм]
+    RhythmFail79 --> RhythmFail83[Не знает ритм]
+    RhythmFail80 --> RhythmFail84[Не знает ритм]
+    RhythmFail81 --> RhythmFail85[Не знает ритм]
+    RhythmFail82 --> RhythmFail86[Не знает ритм]
+    RhythmFail83 --> RhythmFail87[Не знает ритм]
+    RhythmFail84 --> RhythmFail88[Не знает ритм]
+    RhythmFail85 --> RhythmFail89[Не знает ритм]
+    RhythmFail86 --> RhythmFail90[Не знает ритм]
+    RhythmFail87 --> RhythmFail91[Не знает ритм]
+    RhythmFail88 --> RhythmFail92[Не знает ритм]
+    RhythmFail89 --> RhythmFail93[Не знает ритм]
+    RhythmFail90 --> RhythmFail94[Не знает ритм]
+    RhythmFail91 --> RhythmFail95[Не знает ритм]
+    RhythmFail92 --> RhythmFail96[Не знает ритм]
+    RhythmFail93 --> RhythmFail97[Не знает ритм]
+    RhythmFail94 --> RhythmFail98[Не знает ритм]
+    RhythmFail95 --> RhythmFail99[Не знает ритм]
+    RhythmFail96 --> RhythmFail100[Не знает ритм]
+
+    %% ПУТЬ И ТРАВЫ
+    RhythmSuccess --> PathChoice[🛤️ Выбор пути]
+    RhythmFail1 --> PathChoice
+    RhythmFail2 --> PathChoice
+    RhythmFail3 --> PathChoice
+    RhythmFail4 --> PathChoice
+    RhythmFail5 --> PathChoice
+    RhythmFail6 --> PathChoice
+    RhythmFail7 --> PathChoice
+    RhythmFail8 --> PathChoice
+    RhythmFail9 --> PathChoice
+    RhythmFail10 --> PathChoice
+    RhythmFail11 --> PathChoice
+    RhythmFail12 --> PathChoice
+    RhythmFail13 --> PathChoice
+    RhythmFail14 --> PathChoice
+    RhythmFail15 --> PathChoice
+    RhythmFail16 --> PathChoice
+    RhythmFail17 --> PathChoice
+    RhythmFail18 --> PathChoice
+    RhythmFail19 --> PathChoice
+    RhythmFail20 --> PathChoice
+    RhythmFail21 --> PathChoice
+    RhythmFail22 --> PathChoice
+    RhythmFail23 --> PathChoice
+    RhythmFail24 --> PathChoice
+    RhythmFail25 --> PathChoice
+    RhythmFail26 --> PathChoice
+    RhythmFail27 --> PathChoice
+    RhythmFail28 --> PathChoice
+    RhythmFail29 --> PathChoice
+    RhythmFail30 --> PathChoice
+    RhythmFail31 --> PathChoice
+    RhythmFail32 --> PathChoice
+    RhythmFail33 --> PathChoice
+    RhythmFail34 --> PathChoice
+    RhythmFail35 --> PathChoice
+    RhythmFail36 --> PathChoice
+    RhythmFail37 --> PathChoice
+    RhythmFail38 --> PathChoice
+    RhythmFail39 --> PathChoice
+    RhythmFail40 --> PathChoice
+    RhythmFail41 --> PathChoice
+    RhythmFail42 --> PathChoice
+    RhythmFail43 --> PathChoice
+    RhythmFail44 --> PathChoice
+    RhythmFail45 --> PathChoice
+    RhythmFail46 --> PathChoice
+    RhythmFail47 --> PathChoice
+    RhythmFail48 --> PathChoice
+    RhythmFail49 --> PathChoice
+    RhythmFail50 --> PathChoice
+    RhythmFail51 --> PathChoice
+    RhythmFail52 --> PathChoice
+    RhythmFail53 --> PathChoice
+    RhythmFail54 --> PathChoice
+    RhythmFail55 --> PathChoice
+    RhythmFail56 --> PathChoice
+    RhythmFail57 --> PathChoice
+    RhythmFail58 --> PathChoice
+    RhythmFail59 --> PathChoice
+    RhythmFail60 --> PathChoice
+    RhythmFail61 --> PathChoice
+    RhythmFail62 --> PathChoice
+    RhythmFail63 --> PathChoice
+    RhythmFail64 --> PathChoice
+    RhythmFail65 --> PathChoice
+    RhythmFail66 --> PathChoice
+    RhythmFail67 --> PathChoice
+    RhythmFail68 --> PathChoice
+    RhythmFail69 --> PathChoice
+    RhythmFail70 --> PathChoice
+    RhythmFail71 --> PathChoice
+    RhythmFail72 --> PathChoice
+    RhythmFail73 --> PathChoice
+    RhythmFail74 --> PathChoice
+    RhythmFail75 --> PathChoice
+    RhythmFail76 --> PathChoice
+    RhythmFail77 --> PathChoice
+    RhythmFail78 --> PathChoice
+    RhythmFail79 --> PathChoice
+    RhythmFail80 --> PathChoice
+    RhythmFail81 --> PathChoice
+    RhythmFail82 --> PathChoice
+    RhythmFail83 --> PathChoice
+    RhythmFail84 --> PathChoice
+    RhythmFail85 --> PathChoice
+    RhythmFail86 --> PathChoice
+    RhythmFail87 --> PathChoice
+    RhythmFail88 --> PathChoice
+    RhythmFail89 --> PathChoice
+    RhythmFail90 --> PathChoice
+    RhythmFail91 --> PathChoice
+    RhythmFail92 --> PathChoice
+    RhythmFail93 --> PathChoice
+    RhythmFail94 --> PathChoice
+    RhythmFail95 --> PathChoice
+    RhythmFail96 --> PathChoice
+    RhythmFail97 --> PathChoice
+    RhythmFail98 --> PathChoice
+    RhythmFail99 --> PathChoice
+    RhythmFail100 --> PathChoice
+
+    PathChoice --> NavChoice{Навигация}
+    NavChoice -->|По звёздам| StarsCheck{Знает звёзды?}
+    NavChoice -->|По солнцу| LostPath[🌊 Заблудилась у реки]
+
+    StarsCheck -->|Да| RouteChoice{Выбор маршрута}
+    StarsCheck -->|Нет| LostPath
+
+    RouteChoice --> Herbs[🌿 Урок 3: Травы]
+    LostPath --> Herbs
+
+    Herbs --> HerbsTest{Изучить внимательно?}
+    HerbsTest -->|Да| HerbsDeep[Глубокое изучение]
+    HerbsTest -->|Нет| HerbsShallow[Поверхностное]
+
+    HerbsDeep --> HerbsQuiz1{Тест: Самая сильная трава?}
+    HerbsQuiz1 -->|Сабельник ✅| HerbsQuiz2{Тест: Сок зверобоя?}
+    HerbsQuiz1 -->|Другие ❌| HerbsFail1
+
+    HerbsQuiz2 -->|Красный сок ✅| HerbsQuiz3{Тест: Растение солнца?}
+    HerbsQuiz2 -->|Другие ❌| HerbsFail2
+
+    HerbsQuiz3 -->|Душица ✅| HerbsSuccess[Знает травы]
+    HerbsQuiz3 -->|Другие ❌| HerbsFail3
+
+    HerbsShallow --> HerbsFail4[Не знает травы]
+
+    HerbsFail1 --> HerbsFail5[Не знает травы]
+    HerbsFail2 --> HerbsFail6[Не знает травы]
+    HerbsFail3 --> HerbsFail7[Не знает травы]
+    HerbsFail4 --> HerbsFail8[Не знает травы]
+    HerbsFail5 --> HerbsFail9[Не знает травы]
+    HerbsFail6 --> HerbsFail10[Не знает травы]
+    HerbsFail7 --> HerbsFail11[Не знает травы]
+    HerbsFail8 --> HerbsFail12[Не знает травы]
+    HerbsFail9 --> HerbsFail13[Не знает травы]
+    HerbsFail10 --> HerbsFail14[Не знает травы]
+    HerbsFail11 --> HerbsFail15[Не знает травы]
+    HerbsFail12 --> HerbsFail16[Не знает травы]
+    HerbsFail13 --> HerbsFail17[Не знает травы]
+    HerbsFail14 --> HerbsFail18[Не знает травы]
+    HerbsFail15 --> HerbsFail19[Не знает травы]
+    HerbsFail16 --> HerbsFail20[Не знает травы]
+    HerbsFail17 --> HerbsFail21[Не знает травы]
+    HerbsFail18 --> HerbsFail22[Не знает травы]
+    HerbsFail19 --> HerbsFail23[Не знает травы]
+    HerbsFail20 --> HerbsFail24[Не знает травы]
+    HerbsFail21 --> HerbsFail25[Не знает травы]
+    HerbsFail22 --> HerbsFail26[Не знает травы]
+    HerbsFail23 --> HerbsFail27[Не знает травы]
+    HerbsFail24 --> HerbsFail28[Не знает травы]
+    HerbsFail25 --> HerbsFail29[Не знает травы]
+    HerbsFail26 --> HerbsFail30[Не знает травы]
+    HerbsFail27 --> HerbsFail31[Не знает травы]
+    HerbsFail28 --> HerbsFail32[Не знает травы]
+    HerbsFail29 --> HerbsFail33[Не знает травы]
+    HerbsFail30 --> HerbsFail34[Не знает травы]
+    HerbsFail31 --> HerbsFail35[Не знает травы]
+    HerbsFail32 --> HerbsFail36[Не знает травы]
+    HerbsFail33 --> HerbsFail37[Не знает травы]
+    HerbsFail34 --> HerbsFail38[Не знает травы]
+    HerbsFail35 --> HerbsFail39[Не знает травы]
+    HerbsFail36 --> HerbsFail40[Не знает травы]
+    HerbsFail37 --> HerbsFail41[Не знает травы]
+    HerbsFail38 --> HerbsFail42[Не знает травы]
+    HerbsFail39 --> HerbsFail43[Не знает травы]
+    HerbsFail40 --> HerbsFail44[Не знает травы]
+    HerbsFail41 --> HerbsFail45[Не знает травы]
+    HerbsFail42 --> HerbsFail46[Не знает травы]
+    HerbsFail43 --> HerbsFail47[Не знает травы]
+    HerbsFail44 --> HerbsFail48[Не знает травы]
+    HerbsFail45 --> HerbsFail49[Не знает травы]
+    HerbsFail46 --> HerbsFail50[Не знает травы]
+    HerbsFail47 --> HerbsFail51[Не знает травы]
+    HerbsFail48 --> HerbsFail52[Не знает травы]
+    HerbsFail49 --> HerbsFail53[Не знает травы]
+    HerbsFail50 --> HerbsFail54[Не знает травы]
+    HerbsFail51 --> HerbsFail55[Не знает травы]
+    HerbsFail52 --> HerbsFail56[Не знает травы]
+    HerbsFail53 --> HerbsFail57[Не знает травы]
+    HerbsFail54 --> HerbsFail58[Не знает травы]
+    HerbsFail55 --> HerbsFail59[Не знает травы]
+    HerbsFail56 --> HerbsFail60[Не знает травы]
+    HerbsFail57 --> HerbsFail61[Не знает травы]
+    HerbsFail58 --> HerbsFail62[Не знает травы]
+    HerbsFail59 --> HerbsFail63[Не знает травы]
+    HerbsFail60 --> HerbsFail64[Не знает травы]
+    HerbsFail61 --> HerbsFail65[Не знает травы]
+    HerbsFail62 --> HerbsFail66[Не знает травы]
+    HerbsFail63 --> HerbsFail67[Не знает травы]
+    HerbsFail64 --> HerbsFail68[Не знает травы]
+    HerbsFail65 --> HerbsFail69[Не знает травы]
+    HerbsFail66 --> HerbsFail70[Не знает травы]
+    HerbsFail67 --> HerbsFail71[Не знает травы]
+    HerbsFail68 --> HerbsFail72[Не знает травы]
+    HerbsFail69 --> HerbsFail73[Не знает травы]
+    HerbsFail70 --> HerbsFail74[Не знает травы]
+    HerbsFail71 --> HerbsFail75[Не знает травы]
+    HerbsFail72 --> HerbsFail76[Не знает травы]
+    HerbsFail73 --> HerbsFail77[Не знает травы]
+    HerbsFail74 --> HerbsFail78[Не знает травы]
+    HerbsFail75 --> HerbsFail79[Не знает травы]
+    HerbsFail76 --> HerbsFail80[Не знает травы]
+    HerbsFail77 --> HerbsFail81[Не знает травы]
+    HerbsFail78 --> HerbsFail82[Не знает травы]
+    HerbsFail79 --> HerbsFail83[Не знает травы]
+    HerbsFail80 --> HerbsFail84[Не знает травы]
+    HerbsFail81 --> HerbsFail85[Не знает травы]
+    HerbsFail82 --> HerbsFail86[Не знает травы]
+    HerbsFail83 --> HerbsFail87[Не знает травы]
+    HerbsFail84 --> HerbsFail88[Не знает травы]
+    HerbsFail85 --> HerbsFail89[Не знает травы]
+    HerbsFail86 --> HerbsFail90[Не знает травы]
+    HerbsFail87 --> HerbsFail91[Не знает травы]
+    HerbsFail88 --> HerbsFail92[Не знает травы]
+    HerbsFail89 --> HerbsFail93[Не знает травы]
+    HerbsFail90 --> HerbsFail94[Не знает травы]
+    HerbsFail91 --> HerbsFail95[Не знает травы]
+    HerbsFail92 --> HerbsFail96[Не знает травы]
+    HerbsFail93 --> HerbsFail97[Не знает травы]
+    HerbsFail94 --> HerbsFail98[Не знает травы]
+    HerbsFail95 --> HerbsFail99[Не знает травы]
+    HerbsFail96 --> HerbsFail100[Не знает травы]
+    HerbsFail97 --> HerbsFail101[Не знает травы]
+    HerbsFail98 --> HerbsFail102[Не знает травы]
+    HerbsFail99 --> HerbsFail103[Не знает травы]
+    HerbsFail100 --> HerbsFail104[Не знает травы]
+    HerbsFail101 --> HerbsFail105[Не знает травы]
+    HerbsFail102 --> HerbsFail106[Не знает травы]
+    HerbsFail103 --> HerbsFail107[Не знает травы]
+    HerbsFail104 --> HerbsFail108[Не знает травы]
+    HerbsFail105 --> HerbsFail109[Не знает травы]
+    HerbsFail106 --> HerbsFail110[Не знает травы]
+    HerbsFail107 --> HerbsFail111[Не знает травы]
+    HerbsFail108 --> HerbsFail112[Не знает травы]
+    HerbsFail109 --> HerbsFail113[Не знает травы]
+    HerbsFail110 --> HerbsFail114[Не знает травы]
+    HerbsFail111 --> HerbsFail115[Не знает травы]
+    HerbsFail112 --> HerbsFail116[Не знает травы]
+    HerbsFail113 --> HerbsFail117[Не знает травы]
+    HerbsFail114 --> HerbsFail118[Не знает травы]
+    HerbsFail115 --> HerbsFail119[Не знает травы]
+    HerbsFail116 --> HerbsFail120[Не знает травы]
+    HerbsFail117 --> HerbsFail121[Не знает травы]
+    HerbsFail118 --> HerbsFail122[Не знает травы]
+    HerbsFail119 --> HerbsFail123[Не знает травы]
+    HerbsFail120 --> HerbsFail124[Не знает травы]
+    HerbsFail121 --> HerbsFail125[Не знает травы]
+    HerbsFail122 --> HerbsFail126[Не знает травы]
+    HerbsFail123 --> HerbsFail127[Не знает травы]
+    HerbsFail124 --> HerbsFail128[Не знает травы]
+    HerbsFail125 --> HerbsFail129[Не знает травы]
+    HerbsFail126 --> HerbsFail130[Не знает травы]
+    HerbsFail127 --> HerbsFail131[Не знает травы]
+    HerbsFail128 --> HerbsFail132[Не знает травы]
+    HerbsFail129 --> HerbsFail133[Не знает травы]
+    HerbsFail130 --> HerbsFail134[Не знает травы]
+    HerbsFail131 --> HerbsFail135[Не знает травы]
+    HerbsFail132 --> HerbsFail136[Не знает травы]
+    HerbsFail133 --> HerbsFail137[Не знает травы]
+    HerbsFail134 --> HerbsFail138[Не знает травы]
+    HerbsFail135 --> HerbsFail139[Не знает травы]
+    HerbsFail136 --> HerbsFail140[Не знает травы]
+    HerbsFail137 --> HerbsFail141[Не знает травы]
+    HerbsFail138 --> HerbsFail142[Не знает травы]
+    HerbsFail139 --> HerbsFail143[Не знает травы]
+    HerbsFail140 --> HerbsFail144[Не знает травы]
+    HerbsFail141 --> HerbsFail145[Не знает травы]
+    HerbsFail142 --> HerbsFail146[Не знает травы]
+    HerbsFail143 --> HerbsFail147[Не знает травы]
+    HerbsFail144 --> HerbsFail148[Не знает травы]
+    HerbsFail145 --> HerbsFail149[Не знает травы]
+    HerbsFail146 --> HerbsFail150[Не знает травы]
+    HerbsFail147 --> HerbsFail151[Не знает травы]
+    HerbsFail148 --> HerbsFail152[Не знает травы]
+    HerbsFail149 --> HerbsFail153[Не знает травы]
+    HerbsFail150 --> HerbsFail154[Не знает травы]
+    HerbsFail151 --> HerbsFail155[Не знает травы]
+    HerbsFail152 --> HerbsFail156[Не знает травы]
+    HerbsFail153 --> HerbsFail157[Не знает травы]
+    HerbsFail154 --> HerbsFail158[Не знает травы]
+    HerbsFail155 --> HerbsFail159[Не знает травы]
+    HerbsFail156 --> HerbsFail160[Не знает травы]
+    HerbsFail157 --> HerbsFail161[Не знает травы]
+    HerbsFail158 --> HerbsFail162[Не знает травы]
+    HerbsFail159 --> HerbsFail163[Не знает травы]
+    HerbsFail160 --> HerbsFail164[Не знает травы]
+    HerbsFail161 --> HerbsFail165[Не знает травы]
+    HerbsFail162 --> HerbsFail166[Не знает травы]
+    HerbsFail163 --> HerbsFail167[Не знает травы]
+    HerbsFail164 --> HerbsFail168[Не знает травы]
+    HerbsFail165 --> HerbsFail169[Не знает травы]
+    HerbsFail166 --> HerbsFail170[Не знает травы]
+    HerbsFail167 --> HerbsFail171[Не знает травы]
+    HerbsFail168 --> HerbsFail172[Не знает травы]
+    HerbsFail169 --> HerbsFail173[Не знает травы]
+    HerbsFail170 --> HerbsFail174[Не знает травы]
+    HerbsFail171 --> HerbsFail175[Не знает травы]
+    HerbsFail172 --> HerbsFail176[Не знает травы]
+    HerbsFail173 --> HerbsFail177[Не знает травы]
+    HerbsFail174 --> HerbsFail178[Не знает травы]
+    HerbsFail175 --> HerbsFail179[Не знает травы]
+    HerbsFail176 --> HerbsFail180[Не знает травы]
+    HerbsFail177 --> HerbsFail181[Не знает травы]
+    HerbsFail178 --> HerbsFail182[Не знает травы]
+    HerbsFail179 --> HerbsFail183[Не знает травы]
+    HerbsFail180 --> HerbsFail184[Не знает травы]
+    HerbsFail181 --> HerbsFail185[Не знает травы]
+    HerbsFail182 --> HerbsFail186[Не знает травы]
+    HerbsFail183 --> HerbsFail187[Не знает травы]
+    HerbsFail184 --> HerbsFail188[Не знает травы]
+    HerbsFail185 --> HerbsFail189[Не знает травы]
+    HerbsFail186 --> HerbsFail190[Не знает травы]
+    HerbsFail187 --> HerbsFail191[Не знает травы]
+    HerbsFail188 --> HerbsFail192[Не знает травы]
+    HerbsFail189 --> HerbsFail193[Не знает травы]
+    HerbsFail190 --> HerbsFail194[Не знает травы]
+    HerbsFail191 --> HerbsFail195[Не знает травы]
+    HerbsFail192 --> HerbsFail196[Не знает травы]
+    HerbsFail193 --> HerbsFail197[Не знает травы]
+    HerbsFail194 --> HerbsFail198[Не знает травы]
+    HerbsFail195 --> HerbsFail199[Не знает травы]
+    HerbsFail196 --> HerbsFail200[Не знает травы]
+    HerbsFail197 --> HerbsFail201[Не знает травы]
+    HerbsFail198 --> HerbsFail202[Не знает травы]
+    HerbsFail199 --> HerbsFail203[Не знает травы]
+    HerbsFail200 --> HerbsFail204[Не знает травы]
+    HerbsFail201 --> HerbsFail205[Не знает травы]
+    HerbsFail202 --> HerbsFail206[Не знает травы]
+    HerbsFail203 --> HerbsFail207[Не знает травы]
+    HerbsFail204 --> HerbsFail208[Не знает травы]
+    HerbsFail205 --> HerbsFail209[Не знает травы]
+    HerbsFail206 --> HerbsFail210[Не знает травы]
+    HerbsFail207 --> HerbsFail211[Не знает травы]
+    HerbsFail208 --> HerbsFail212[Не знает травы]
+    HerbsFail209 --> HerbsFail213[Не знает травы]
+    HerbsFail210 --> HerbsFail214[Не знает травы]
+    HerbsFail211 --> HerbsFail215[Не знает травы]
+    HerbsFail212 --> HerbsFail216[Не знает травы]
+    HerbsFail213 --> HerbsFail217[Не знает травы]
+    HerbsFail214 --> HerbsFail218[Не знает травы]
+    HerbsFail215 --> HerbsFail219[Не знает травы]
+    HerbsFail216 --> HerbsFail220[Не знает травы]
+    HerbsFail217 --> HerbsFail221[Не знает травы]
+    HerbsFail218 --> HerbsFail222[Не знает травы]
+    HerbsFail219 --> HerbsFail223[Не знает травы]
+    HerbsFail220 --> HerbsFail224[Не знает травы]
+    HerbsFail221 --> HerbsFail225[Не знает травы]
+    HerbsFail222 --> HerbsFail226[Не знает травы]
+    HerbsFail223 --> HerbsFail227[Не знает травы]
+    HerbsFail224 --> HerbsFail228[Не знает травы]
+    HerbsFail225 --> HerbsFail229[Не знает травы]
+    HerbsFail226 --> HerbsFail230[Не знает травы]
+    HerbsFail227 --> HerbsFail231[Не знает травы]
+    HerbsFail228 --> HerbsFail232[Не знает травы]
+    HerbsFail229 --> HerbsFail233[Не знает травы]
+    HerbsFail230 --> HerbsFail234[Не знает травы]
+    HerbsFail231 --> HerbsFail235[Не знает травы]
+    HerbsFail232 --> HerbsFail236[Не знает травы]
+    HerbsFail233 --> HerbsFail237[Не знает травы]
+    HerbsFail234 --> HerbsFail238[Не знает травы]
+    HerbsFail235 --> HerbsFail239[Не знает травы]
+    HerbsFail236 --> HerbsFail240[Не знает травы]
+    HerbsFail237 --> HerbsFail241[Не знает травы]
+    HerbsFail238 --> HerbsFail242[Не знает травы]
+    HerbsFail239 --> HerbsFail243[Не знает травы]
+    HerbsFail240 --> HerbsFail244[Не знает травы]
+    HerbsFail241 --> HerbsFail245[Не знает травы]
+    HerbsFail242 --> HerbsFail246[Не знает травы]
+    HerbsFail243 --> HerbsFail247[Не знает травы]
+    HerbsFail244 --> HerbsFail248[Не знает травы]
+    HerbsFail245 --> HerbsFail249[Не знает травы]
+    HerbsFail246 --> HerbsFail250[Не знает травы]
+    HerbsFail247 --> HerbsFail251[Не знает травы]
+    HerbsFail248 --> HerbsFail252[Не знает травы]
+    HerbsFail249 --> HerbsFail253[Не знает травы]
+    HerbsFail250 --> HerbsFail254[Не знает травы]
+    HerbsFail251 --> HerbsFail255[Не знает травы]
+    HerbsFail252 --> HerbsFail256[Не знает травы]
+    HerbsFail253 --> HerbsFail257[Не знает травы]
+    HerbsFail254 --> HerbsFail258[Не знает травы]
+    HerbsFail255 --> HerbsFail259[Не знает травы]
+    HerbsFail256 --> HerbsFail260[Не знает травы]
+    HerbsFail257 --> HerbsFail261[Не знает травы]
+    HerbsFail258 --> HerbsFail262[Не знает травы]
+    HerbsFail259 --> HerbsFail263[Не знает травы]
+    HerbsFail260 --> HerbsFail264[Не знает травы]
+    HerbsFail261 --> HerbsFail265[Не знает травы]
+    HerbsFail262 --> HerbsFail266[Не знает травы]
+    HerbsFail263 --> HerbsFail267[Не знает травы]
+    HerbsFail264 --> HerbsFail268[Не знает травы]
+    HerbsFail265 --> HerbsFail269[Не знает травы]
+    HerbsFail266 --> HerbsFail270[Не знает травы]
+    HerbsFail267 --> HerbsFail271[Не знает травы]
+    HerbsFail268 --> HerbsFail272[Не знает травы]
+    HerbsFail269 --> HerbsFail273[Не знает травы]
+    HerbsFail270 --> HerbsFail274[Не знает травы]
+    HerbsFail271 --> HerbsFail275[Не знает травы]
+    HerbsFail272 --> HerbsFail276[Не знает травы]
+    HerbsFail273 --> HerbsFail277[Не знает травы]
+    HerbsFail274 --> HerbsFail278[Не знает травы]
+    HerbsFail275 --> HerbsFail279[Не знает травы]
+    HerbsFail276 --> HerbsFail280[Не знает травы]
+    HerbsFail277 --> HerbsFail281[Не знает травы]
+    HerbsFail278 --> HerbsFail282[Не знает травы]
+    HerbsFail279 --> HerbsFail283[Не знает травы]
+    HerbsFail280 --> HerbsFail284[Не знает травы]
+    HerbsFail281 --> HerbsFail285[Не знает травы]
+    HerbsFail282 --> HerbsFail286[Не знает травы]
+    HerbsFail283 --> HerbsFail287[Не знает травы]
+    HerbsFail284 --> HerbsFail288[Не знает травы]
+    HerbsFail285 --> HerbsFail289[Не знает травы]
+    HerbsFail286 --> HerbsFail290[Не знает травы]
+    HerbsFail287 --> HerbsFail291[Не знает травы]
+    HerbsFail288 --> HerbsFail292[Не знает травы]
+    HerbsFail289 --> HerbsFail293[Не знает травы]
+    HerbsFail290 --> HerbsFail294[Не знает травы]
+    HerbsFail291 --> HerbsFail295[Не знает травы]
+    HerbsFail292 --> HerbsFail296[Не знает травы]
+    HerbsFail293 --> HerbsFail297[Не знает травы]
+    HerbsFail294 --> HerbsFail298[Не знает травы]
+    HerbsFail295 --> HerbsFail299[Не знает травы]
+    HerbsFail296 --> HerbsFail300[Не знает травы]
+    HerbsFail297 --> HerbsFail301[Не знает травы]
+    HerbsFail298 --> HerbsFail302[Не знает травы]
+    HerbsFail299 --> HerbsFail303[Не знает травы]
+    HerbsFail300 --> HerbsFail304[Не знает травы]
+    HerbsFail301 --> HerbsFail305[Не знает травы]
+    HerbsFail302 --> HerbsFail306[Не знает травы]
+    HerbsFail303 --> HerbsFail307[Не знает травы]
+    HerbsFail304 --> HerbsFail308[Не знает травы]
+    HerbsFail305 --> HerbsFail309[Не знает травы]
+    HerbsFail306 --> HerbsFail310[Не знает травы]
+    HerbsFail307 --> HerbsFail311[Не знает травы]
+    HerbsFail308 --> HerbsFail312[Не знает травы]
+    HerbsFail309 --> HerbsFail313[Не знает травы]
+    HerbsFail310 --> HerbsFail314[Не знает травы]
+    HerbsFail311 --> HerbsFail315[Не знает травы]
+    HerbsFail312 --> HerbsFail316[Не знает травы]
+    HerbsFail313 --> HerbsFail317[Не знает травы]
+    HerbsFail314 --> HerbsFail318[Не знает травы]
+    HerbsFail315 --> HerbsFail319[Не знает травы]
+    HerbsFail316 --> HerbsFail320[Не знает травы]
+    HerbsFail317 --> HerbsFail321[Не знает травы]
+    HerbsFail318 --> HerbsFail322[Не знает травы]
+    HerbsFail319 --> HerbsFail323[Не знает травы]
+    HerbsFail320 --> HerbsFail324[Не знает травы]
+    HerbsFail321 --> HerbsFail325[Не знает травы]
+    HerbsFail322 --> HerbsFail326[Не знает травы]
+    HerbsFail323 --> HerbsFail327[Не знает травы]
+    HerbsFail324 --> HerbsFail328[Не знает травы]
+    HerbsFail325 --> HerbsFail329[Не знает травы]
+    HerbsFail326 --> HerbsFail330[Не знает травы]
+    HerbsFail327 --> HerbsFail331[Не знает травы]
+    HerbsFail328 --> HerbsFail332[Не знает травы]
+    HerbsFail329 --> HerbsFail333[Не знает травы]
+    HerbsFail330 --> HerbsFail334[Не знает травы]
+    HerbsFail331 --> HerbsFail335[Не знает травы]
+    HerbsFail332 --> HerbsFail336[Не знает травы]
+    HerbsFail333 --> HerbsFail337[Не знает травы]
+    HerbsFail334 --> HerbsFail338[Не знает травы]
+    HerbsFail335 --> HerbsFail339[Не знает травы]
+    HerbsFail336 --> HerbsFail340[Не знает травы]
+    HerbsFail337 --> HerbsFail341[Не знает травы]
+    HerbsFail338 --> HerbsFail342[Не знает травы]
+    HerbsFail339 --> HerbsFail343[Не знает травы]
+    HerbsFail340 --> HerbsFail344[Не знает травы]
+    HerbsFail341 --> HerbsFail345[Не знает травы]
+    HerbsFail342 --> HerbsFail346[Не знает травы]
+    HerbsFail343 --> HerbsFail347[Не знает травы]
+    HerbsFail344 --> HerbsFail348[Не знает травы]
+    HerbsFail345 --> HerbsFail349[Не знает травы]
+    HerbsFail346 --> HerbsFail350[Не знает травы]
+    HerbsFail347 --> HerbsFail351[Не знает травы]
+    HerbsFail348 --> HerbsFail352[Не знает травы]
+    HerbsFail349 --> HerbsFail353[Не знает травы]
+    HerbsFail350 --> HerbsFail354[Не знает травы]
+    HerbsFail351 --> HerbsFail355[Не знает травы]
+    HerbsFail352 --> HerbsFail356[Не знает травы]
+    HerbsFail353 --> HerbsFail357[Не знает травы]
+    HerbsFail354 --> HerbsFail358[Не знает травы]
+    HerbsFail355 --> HerbsFail359[Не знает травы]
+    HerbsFail356 --> HerbsFail360[Не знает травы]
+    HerbsFail357 --> HerbsFail361[Не знает травы]
+    HerbsFail358 --> HerbsFail362[Не знает травы]
+    HerbsFail359 --> HerbsFail363[Не знает травы]
+    HerbsFail360 --> HerbsFail364[Не знает травы]
+    HerbsFail361 --> HerbsFail365[Не знает травы]
+    HerbsFail362 --> HerbsFail366[Не знает травы]
+    HerbsFail363 --> HerbsFail367[Не знает травы]
+    HerbsFail364 --> HerbsFail368[Не знает травы]
+    HerbsFail365 --> HerbsFail369[Не знает травы]
+    HerbsFail366 --> HerbsFail370[Не знает травы]
+    HerbsFail367 --> HerbsFail371[Не знает травы]
+    HerbsFail368 --> HerbsFail372[Не знает травы]
+    HerbsFail369 --> HerbsFail373[Не знает травы]
+    HerbsFail370 --> HerbsFail374[Не знает травы]
+    HerbsFail371 --> HerbsFail375[Не знает травы]
+    HerbsFail372 --> HerbsFail376[Не знает травы]
+    HerbsFail373 --> HerbsFail377[Не знает травы]
+    HerbsFail374 --> HerbsFail378[Не знает травы]
+    HerbsFail375 --> HerbsFail379[Не знает травы]
+    HerbsFail376 --> HerbsFail380[Не знает травы]
+    HerbsFail377 --> HerbsFail381[Не знает травы]
+    HerbsFail378 --> HerbsFail382[Не знает травы]
+    HerbsFail379 --> HerbsFail383[Не знает травы]
+    HerbsFail380 --> HerbsFail384[Не знает травы]
+    HerbsFail381 --> HerbsFail385[Не знает травы]
+    HerbsFail382 --> HerbsFail386[Не знает травы]
+    HerbsFail383 --> HerbsFail387[Не знает травы]
+    HerbsFail384 --> HerbsFail388[Не знает травы]
+    HerbsFail385 --> HerbsFail389[Не знает травы]
+    HerbsFail386 --> HerbsFail390[Не знает травы]
+    HerbsFail387 --> HerbsFail391[Не знает травы]
+    HerbsFail388 --> HerbsFail392[Не знает травы]
+    HerbsFail389 --> HerbsFail393[Не знает травы]
+    HerbsFail390 --> HerbsFail394[Не знает травы]
+    HerbsFail391 --> HerbsFail395[Не знает травы]
+    HerbsFail392 --> HerbsFail396[Не знает травы]
+    HerbsFail393 --> HerbsFail397[Не знает травы]
+    HerbsFail394 --> HerbsFail398[Не знает травы]
+    HerbsFail395 --> HerbsFail399[Не знает травы]
+    HerbsFail396 --> HerbsFail400[Не знает травы]
+    HerbsFail397 --> HerbsFail401[Не знает травы]
+    HerbsFail398 --> HerbsFail402[Не знает травы]
+    HerbsFail399 --> HerbsFail403[Не знает травы]
+    HerbsFail400 --> HerbsFail404[Не знает травы]
+    HerbsFail401 --> HerbsFail405[Не знает травы]
+    HerbsFail402 --> HerbsFail406[Не знает травы]
+    HerbsFail403 --> HerbsFail407[Не знает травы]
+    HerbsFail404 --> HerbsFail408[Не знает травы]
+    HerbsFail405 --> HerbsFail409[Не знает травы]
+    HerbsFail406 --> HerbsFail410[Не знает травы]
+    HerbsFail407 --> HerbsFail411[Не знает травы]
+    HerbsFail408 --> HerbsFail412[Не знает травы]
+    HerbsFail409 --> HerbsFail413[Не знает травы]
+    HerbsFail410 --> HerbsFail414[Не знает травы]
+    HerbsFail411 --> HerbsFail415[Не знает травы]
+    HerbsFail412 --> HerbsFail416[Не знает травы]
+    HerbsFail413 --> HerbsFail417[Не знает травы]
+    HerbsFail414 --> HerbsFail418[Не знает травы]
+    HerbsFail415 --> HerbsFail419[Не знает травы]
+    HerbsFail416 --> HerbsFail420[Не знает травы]
+    HerbsFail417 --> HerbsFail421[Не знает травы]
+    HerbsFail418 --> HerbsFail422[Не знает травы]
+    HerbsFail419 --> HerbsFail423[Не знает травы]
+    HerbsFail420 --> HerbsFail424[Не знает травы]
+    HerbsFail421 --> HerbsFail425[Не знает травы]
+    HerbsFail422 --> HerbsFail426[Не знает травы]
+    HerbsFail423 --> HerbsFail427[Не знает травы]
+    HerbsFail424 --> HerbsFail428[Не знает травы]
+    HerbsFail425 --> HerbsFail429[Не знает травы]
+    HerbsFail426 --> HerbsFail430[Не знает травы]
+    HerbsFail427 --> HerbsFail431[Не знает травы]
+    HerbsFail428 --> HerbsFail432[Не знает травы]
+    HerbsFail429 --> HerbsFail433[Не знает травы]
+    HerbsFail430 --> HerbsFail434[Не знает травы]
+    HerbsFail431 --> HerbsFail435[Не знает травы]
+    HerbsFail432 --> HerbsFail436[Не знает травы]
+    HerbsFail433 --> HerbsFail437[Не знает травы]
+    HerbsFail434 --> HerbsFail438[Не знает травы]
+    HerbsFail435 --> HerbsFail439[Не знает травы]
+    HerbsFail436 --> HerbsFail440[Не знает травы]
+    HerbsFail437 --> HerbsFail441[Не знает травы]
+    HerbsFail438 --> HerbsFail442[Не знает травы]
+    HerbsFail439 --> HerbsFail443[Не знает травы]
+    HerbsFail440 --> HerbsFail444[Не знает травы]
+    HerbsFail441 --> HerbsFail445[Не знает травы]
+    HerbsFail442 --> HerbsFail446[Не знает травы]
+    HerbsFail443 --> HerbsFail447[Не знает травы]
+    HerbsFail444 --> HerbsFail448[Не знает травы]
+    HerbsFail445 --> HerbsFail449[Не знает травы]
+    HerbsFail446 --> HerbsFail450[Не знает травы]
+    HerbsFail447 --> HerbsFail451[Не знает травы]
+    HerbsFail448 --> HerbsFail452[Не знает травы]
+    HerbsFail449 --> HerbsFail453[Не знает травы]
+    HerbsFail450 --> HerbsFail454[Не знает травы]
+    HerbsFail451 --> HerbsFail455[Не знает травы]
+    HerbsFail452 --> HerbsFail456[Не знает травы]
+    HerbsFail453 --> HerbsFail457[Не знает травы]
+    HerbsFail454 --> HerbsFail458[Не знает травы]
+    HerbsFail455 --> HerbsFail459[Не знает травы]
+    HerbsFail456 --> HerbsFail460[Не знает травы]
+    HerbsFail457 --> HerbsFail461[Не знает травы]
+    HerbsFail458 --> HerbsFail462[Не знает травы]
+    HerbsFail459 --> HerbsFail463[Не знает травы]
+    HerbsFail460 --> HerbsFail464[Не знает травы]
+    HerbsFail461 --> HerbsFail465[Не знает травы]
+    HerbsFail462 --> HerbsFail466[Не знает травы]
+    HerbsFail463 --> HerbsFail467[Не знает травы]
+    HerbsFail464 --> HerbsFail468[Не знает травы]
+    HerbsFail465 --> HerbsFail469[Не знает травы]
+    HerbsFail466 --> HerbsFail470[Не знает травы]
+    HerbsFail467 --> HerbsFail471[Не знает травы]
+    HerbsFail468 --> HerbsFail472[Не знает травы]
+    HerbsFail469 --> HerbsFail473[Не знает травы]
+    HerbsFail470 --> HerbsFail474[Не знает травы]
+    HerbsFail471 --> HerbsFail475[Не знает травы]
+    HerbsFail472 --> HerbsFail476[Не знает травы]
+    HerbsFail473 --> HerbsFail477[Не знает травы]
+    HerbsFail474 --> HerbsFail478[Не знает травы]
+    HerbsFail475 --> HerbsFail479[Не знает травы]
+    HerbsFail476 --> HerbsFail480[Не знает травы]
+    HerbsFail477 --> HerbsFail481[Не знает травы]
+    HerbsFail478 --> HerbsFail482[Не знает травы]
+    HerbsFail479 --> HerbsFail483[Не знает травы]
+    HerbsFail480 --> HerbsFail484[Не знает травы]
+    HerbsFail481 --> HerbsFail485[Не знает травы]
+    HerbsFail482 --> HerbsFail486[Не знает травы]
+    HerbsFail483 --> HerbsFail487[Не знает травы]
+    HerbsFail484 --> HerbsFail488[Не знает травы]
+    HerbsFail485 --> HerbsFail489[Не знает травы]
+    HerbsFail486 --> HerbsFail490[Не знает травы]
+    HerbsFail487 --> HerbsFail491[Не знает травы]
+    HerbsFail488 --> HerbsFail492[Не знает травы]
+    HerbsFail489 --> HerbsFail493[Не знает травы]
+    HerbsFail490 --> HerbsFail494[Не знает травы]
+    HerbsFail491 --> HerbsFail495[Не знает травы]
+    HerbsFail492 --> HerbsFail496[Не знает травы]
+    HerbsFail493 --> HerbsFail497[Не знает травы]
+    HerbsFail494 --> HerbsFail498[Не знает травы]
+    HerbsFail495 --> HerbsFail499[Не знает травы]
+    HerbsFail496 --> HerbsFail500[Не знает травы]
+    HerbsFail497 --> HerbsFail501[Не знает травы]
+    HerbsFail498 --> HerbsFail502[Не знает травы]
+    HerbsFail499 --> HerbsFail503[Не знает травы]
+    HerbsFail500 --> HerbsFail504[Не знает травы]
+    HerbsFail501 --> HerbsFail505[Не знает травы]
+    HerbsFail502 --> HerbsFail506[Не знает травы]
+    HerbsFail503 --> HerbsFail507[Не знает травы]
+    HerbsFail504 --> HerbsFail508[Не знает травы]
+    HerbsFail505 --> HerbsFail509[Не знает травы]
+    HerbsFail506 --> HerbsFail510[Не знает травы]
+    HerbsFail507 --> HerbsFail511[Не знает травы]
+    HerbsFail508 --> HerbsFail512[Не знает травы]
+    HerbsFail509 --> HerbsFail513[Не знает травы]
+    HerbsFail510 --> HerbsFail514[Не знает травы]
+    HerbsFail511 --> HerbsFail515[Не знает травы]
+    HerbsFail512 --> HerbsFail516[Не знает травы]
+    HerbsFail513 --> HerbsFail517[Не знает травы]
+    HerbsFail514 --> HerbsFail518[Не знает травы]
+    HerbsFail515 --> HerbsFail519[Не знает травы]
+    HerbsFail516 --> HerbsFail520[Не знает травы]
+    HerbsFail517 --> HerbsFail521[Не знает травы]
+    HerbsFail518 --> HerbsFail522[Не знает травы]
+    HerbsFail519 --> HerbsFail523[Не знает травы]
+    HerbsFail520 --> HerbsFail524[Не знает травы]
+    HerbsFail521 --> HerbsFail525[Не знает травы]
+    HerbsFail522 --> HerbsFail526[Не знает травы]
+    HerbsFail523 --> HerbsFail527[Не знает травы]
+    HerbsFail524 --> HerbsFail528[Не знает травы]
+    HerbsFail525 --> HerbsFail529[Не знает травы]
+    HerbsFail526 --> HerbsFail530[Не знает травы]
+    HerbsFail527 --> HerbsFail531[Не знает травы]
+    HerbsFail528 --> HerbsFail532[Не знает травы]
+    HerbsFail529 --> HerbsFail533[Не знает травы]
+    HerbsFail530 --> HerbsFail534[Не знает травы]
+    HerbsFail531 --> HerbsFail535[Не знает травы]
+    HerbsFail532 --> HerbsFail536[Не знает травы]
+    HerbsFail533 --> HerbsFail537[Не знает травы]
+    HerbsFail534 --> HerbsFail538[Не знает травы]
+    HerbsFail535 --> HerbsFail539[Не знает травы]
+    HerbsFail536 --> HerbsFail540[Не знает травы]
+    HerbsFail537 --> HerbsFail541[Не знает травы]
+    HerbsFail538 --> HerbsFail542[Не знает травы]
+    HerbsFail539 --> HerbsFail543[Не знает травы]
+    HerbsFail540 --> HerbsFail544[Не знает травы]
+    HerbsFail541 --> HerbsFail545[Не знает травы]
+    HerbsFail542 --> HerbsFail546[Не знает травы]
+    HerbsFail543 --> HerbsFail547[Не знает травы]
+    HerbsFail544 --> HerbsFail548[Не знает травы]
+    HerbsFail545 --> HerbsFail549[Не знает травы]
+    HerbsFail546 --> HerbsFail550[Не знает травы]
+    HerbsFail547 --> HerbsFail551[Не знает травы]
+    HerbsFail548 --> HerbsFail552[Не знает травы]
+    HerbsFail549 --> HerbsFail553[Не знает травы]
+    HerbsFail550 --> HerbsFail554[Не знает травы]
+    HerbsFail551 --> HerbsFail555[Не знает травы]
+    HerbsFail552 --> HerbsFail556[Не знает травы]
+    HerbsFail553 --> HerbsFail557[Не знает травы]
+    HerbsFail554 --> HerbsFail558[Не знает травы]
+    HerbsFail555 --> HerbsFail559[Не знает травы]
+    HerbsFail556 --> HerbsFail560[Не знает травы]
+    HerbsFail557 --> HerbsFail561[Не знает травы]
+    HerbsFail558 --> HerbsFail562[Не знает травы]
+    HerbsFail559 --> HerbsFail563[Не знает травы]
+    HerbsFail560 --> HerbsFail564[Не знает травы]
+    HerbsFail561 --> HerbsFail565[Не знает травы]
+    HerbsFail562 --> HerbsFail566[Не знает травы]
+    HerbsFail563 --> HerbsFail567[Не знает травы]
+    HerbsFail564 --> HerbsFail568[Не знает травы]
+    HerbsFail565 --> HerbsFail569[Не знает травы]
+    HerbsFail566 --> HerbsFail570[Не знает травы]
+    HerbsFail567 --> HerbsFail571[Не знает травы]
+    HerbsFail568 --> HerbsFail572[Не знает травы]
+    HerbsFail569 --> HerbsFail573[Не знает травы]
+    HerbsFail570 --> HerbsFail574[Не знает травы]
+    HerbsFail571 --> HerbsFail575[Не знает травы]
+    HerbsFail572 --> HerbsFail576[Не знает травы]
+    HerbsFail573 --> HerbsFail577[Не знает травы]
+    HerbsFail574 --> HerbsFail578[Не знает травы]
+    HerbsFail575 --> HerbsFail579[Не знает травы]
+    HerbsFail576 --> HerbsFail580[Не знает травы]
+    HerbsFail577 --> HerbsFail581[Не знает травы]
+    HerbsFail578 --> HerbsFail582[Не знает травы]
+    HerbsFail579 --> HerbsFail583[Не знает травы]
+    HerbsFail580 --> HerbsFail584[Не знает травы]
+    HerbsFail581 --> HerbsFail585[Не знает травы]
+    HerbsFail582 --> HerbsFail586[Не знает травы]
+    HerbsFail583 --> HerbsFail587[Не знает травы]
+    HerbsFail584 --> HerbsFail588[Не знает травы]
+    HerbsFail585 --> HerbsFail589[Не знает травы]
+    HerbsFail586 --> HerbsFail590[Не знает травы]
+    HerbsFail587 --> HerbsFail591[Не знает травы]
+    HerbsFail588 --> HerbsFail592[Не знает травы]
+    HerbsFail589 --> HerbsFail593[Не знает травы]
+    HerbsFail590 --> HerbsFail594[Не знает травы]
+    HerbsFail591 --> HerbsFail595[Не знает травы]
+    HerbsFail592 --> HerbsFail596[Не знает травы]
+    HerbsFail593 --> HerbsFail597[Не знает травы]
+    HerbsFail594 --> HerbsFail598[Не знает травы]
+    HerbsFail595 --> HerbsFail599[Не знает травы]
+    HerbsFail596 --> HerbsFail600[Не знает травы]
+    HerbsFail597 --> HerbsFail601[Не знает травы]
+    HerbsFail598 --> HerbsFail602[Не знает травы]
+    HerbsFail599 --> HerbsFail603[Не знает травы]
+    HerbsFail600 --> HerbsFail604[Не знает травы]
+    HerbsFail601 --> HerbsFail605[Не знает травы]
+    HerbsFail602 --> HerbsFail606[Не знает травы]
+    HerbsFail603 --> HerbsFail607[Не знает травы]
+    HerbsFail604 --> HerbsFail608[Не знает травы]
+    HerbsFail605 --> HerbsFail609[Не знает травы]
+    HerbsFail606 --> HerbsFail610[Не знает травы]
+    HerbsFail607 --> HerbsFail611[Не знает травы]
+    HerbsFail608 --> HerbsFail612[Не знает травы]
+    HerbsFail609 --> HerbsFail613[Не знает травы]
+    HerbsFail610 --> HerbsFail614[Не знает травы]
+    HerbsFail611 --> HerbsFail615[Не знает травы]
+    HerbsFail612 --> HerbsFail616[Не знает травы]
+    HerbsFail613 --> HerbsFail617[Не знает травы]
+    HerbsFail614 --> HerbsFail618[Не знает травы]
+    HerbsFail615 --> HerbsFail619[Не знает травы]
+    HerbsFail616 --> HerbsFail620[Не знает травы]
+    HerbsFail617 --> HerbsFail621[Не знает травы]
+    HerbsFail618 --> HerbsFail622[Не знает травы]
+    HerbsFail619 --> HerbsFail623[Не знает травы]
+    HerbsFail620 --> HerbsFail624[Не знает травы]
+    HerbsFail621 --> HerbsFail625[Не знает травы]
+    HerbsFail622 --> HerbsFail626[Не знает травы]
+    HerbsFail623 --> HerbsFail627[Не знает травы]
+    HerbsFail624 --> HerbsFail628[Не знает травы]
+    HerbsFail625 --> HerbsFail629[Не знает травы]
+    HerbsFail626 --> HerbsFail630[Не знает травы]
+    HerbsFail627 --> HerbsFail631[Не знает травы]
+    HerbsFail628 --> HerbsFail632[Не знает травы]
+    HerbsFail629 --> HerbsFail633[Не знает травы]
+    HerbsFail630 --> HerbsFail634[Не знает травы]
+    HerbsFail631 --> HerbsFail635[Не знает травы]
+    HerbsFail632 --> HerbsFail636[Не знает травы]
+    HerbsFail633 --> HerbsFail637[Не знает травы]
+    HerbsFail634 --> HerbsFail638[Не знает травы]
+    HerbsFail635 --> HerbsFail639[Не знает травы]
+    HerbsFail636 --> HerbsFail640[Не знает травы]
+    HerbsFail637 --> HerbsFail641[Не знает травы]
+    HerbsFail638 --> HerbsFail642[Не знает травы]
+    HerbsFail639 --> HerbsFail643[Не знает травы]
+    HerbsFail640 --> HerbsFail644[Не знает травы]
+    HerbsFail641 --> HerbsFail645[Не знает травы]
+    HerbsFail642 --> HerbsFail646[Не знает травы]
+    HerbsFail643 --> HerbsFail647[Не знает травы]
+    HerbsFail644 --> HerbsFail648[Не знает травы]
+    HerbsFail645 --> HerbsFail649[Не знает травы]
+    HerbsFail646 --> HerbsFail650[Не знает травы]
+    HerbsFail647 --> HerbsFail651[Не знает травы]
+    HerbsFail648 --> HerbsFail652[Не знает травы]
+    HerbsFail649 --> HerbsFail653[Не знает травы]
+    HerbsFail650 --> HerbsFail654[Не знает травы]
+    HerbsFail651 --> HerbsFail655[Не знает травы]
+    HerbsFail652 --> HerbsFail656[Не знает травы]
+    HerbsFail653 --> HerbsFail657[Не знает травы]
+    HerbsFail654 --> HerbsFail658[Не знает травы]
+    HerbsFail655 --> HerbsFail659[Не знает травы]
+    HerbsFail656 --> HerbsFail660[Не знает травы]
+    HerbsFail657 --> HerbsFail661[Не знает травы]
+    HerbsFail658 --> HerbsFail662[Не знает травы]
+    HerbsFail659 --> HerbsFail663[Не знает травы]
+    HerbsFail660 --> HerbsFail664[Не знает травы]
+    HerbsFail661 --> HerbsFail665[Не знает травы]
+    HerbsFail662 --> HerbsFail666[Не знает травы]
+    HerbsFail663 --> HerbsFail667[Не знает травы]
+    HerbsFail664 --> HerbsFail668[Не знает травы]
+    HerbsFail665 --> HerbsFail669[Не знает травы]
+    HerbsFail666 --> HerbsFail670[Не знает травы]
+    HerbsFail667 --> HerbsFail671[Не знает травы]
+    HerbsFail668 --> HerbsFail672[Не знает травы]
+    HerbsFail669 --> HerbsFail673[Не знает травы]
+    HerbsFail670 --> HerbsFail674[Не знает травы]
+    HerbsFail671 --> HerbsFail675[Не знает травы]
+    HerbsFail672 --> HerbsFail676[Не знает травы]
+    HerbsFail673 --> HerbsFail677[Не знает травы]
+    HerbsFail674 --> HerbsFail678[Не знает травы]
+    HerbsFail675 --> HerbsFail679[Не знает травы]
+    HerbsFail676 --> HerbsFail680[Не знает травы]
+    HerbsFail677 --> HerbsFail681[Не знает травы]
+    HerbsFail678 --> HerbsFail682[Не знает травы]
+    HerbsFail679 --> HerbsFail683[Не знает травы]
+    HerbsFail680 --> HerbsFail684[Не знает травы]
+    HerbsFail681 --> HerbsFail685[Не знает травы]
+    HerbsFail682 --> HerbsFail686[Не знает травы]
+    HerbsFail683 --> HerbsFail687[Не знает травы]
+    HerbsFail684 --> HerbsFail688[Не знает травы]
+    HerbsFail685 --> HerbsFail689[Не знает травы]
+    HerbsFail686 --> HerbsFail690[Не знает травы]
+    HerbsFail687 --> HerbsFail691[Не знает травы]
+    HerbsFail688 --> HerbsFail692[Не знает травы]
+    HerbsFail689 --> HerbsFail693[Не знает травы]
+    HerbsFail690 --> HerbsFail694[Не знает травы]
+    HerbsFail691 --> HerbsFail695[Не знает травы]
+    HerbsFail692 --> HerbsFail696[Не знает травы]
+    HerbsFail693 --> HerbsFail697[Не знает травы]
+    HerbsFail694 --> HerbsFail698[Не знает травы]
+    HerbsFail695 --> HerbsFail699[Не знает травы]
+    HerbsFail696 --> HerbsFail700[Не знает травы]
+
+    %% КОНЕЦ ПУТИ
+    HerbsSuccess --> Dragon[🐉 Битва с Адзахи]
+    HerbsFail1 --> Dragon
+    HerbsFail2 --> Dragon
+    HerbsFail3 --> Dragon
+    HerbsFail4 --> Dragon
+    HerbsFail5 --> Dragon
+    HerbsFail6 --> Dragon
+    HerbsFail7 --> Dragon
+    HerbsFail8 --> Dragon
+    HerbsFail9 --> Dragon
+    HerbsFail10 --> Dragon
+    HerbsFail11 --> Dragon
+    HerbsFail12 --> Dragon
+    HerbsFail13 --> Dragon
+    HerbsFail14 --> Dragon
+    HerbsFail15 --> Dragon
+    HerbsFail16 --> Dragon
+    HerbsFail17 --> Dragon
+    HerbsFail18 --> Dragon
+    HerbsFail19 --> Dragon
+    HerbsFail20 --> Dragon
+    HerbsFail21 --> Dragon
+    HerbsFail22 --> Dragon
+    HerbsFail23 --> Dragon
+    HerbsFail24 --> Dragon
+    HerbsFail25 --> Dragon
+    HerbsFail26 --> Dragon
+    HerbsFail27 --> Dragon
+    HerbsFail28 --> Dragon
+    HerbsFail29 --> Dragon
+    HerbsFail30 --> Dragon
+    HerbsFail31 --> Dragon
+    HerbsFail32 --> Dragon
+    HerbsFail33 --> Dragon
+    HerbsFail34 --> Dragon
+    HerbsFail35 --> Dragon
+    HerbsFail36 --> Dragon
+    HerbsFail37 --> Dragon
+    HerbsFail38 --> Dragon
+    HerbsFail39 --> Dragon
+    HerbsFail40 --> Dragon
+    HerbsFail41 --> Dragon
+    HerbsFail42 --> Dragon
+    HerbsFail43 --> Dragon
+    HerbsFail44 --> Dragon
+    HerbsFail45 --> Dragon
+    HerbsFail46 --> Dragon
+    HerbsFail47 --> Dragon
+    HerbsFail48 --> Dragon
+    HerbsFail49 --> Dragon
+    HerbsFail50 --> Dragon
+    HerbsFail51 --> Dragon
+    HerbsFail52 --> Dragon
+    HerbsFail53 --> Dragon
+    HerbsFail54 --> Dragon
+    HerbsFail55 --> Dragon
+    HerbsFail56 --> Dragon
+    HerbsFail57 --> Dragon
+    HerbsFail58 --> Dragon
+    HerbsFail59 --> Dragon
+    HerbsFail60 --> Dragon
+    HerbsFail61 --> Dragon
+    HerbsFail62 --> Dragon
+    HerbsFail63 --> Dragon
+    HerbsFail64 --> Dragon
+    HerbsFail65 --> Dragon
+    HerbsFail66 --> Dragon
+    HerbsFail67 --> Dragon
+    HerbsFail68 --> Dragon
+    HerbsFail69 --> Dragon
+    HerbsFail70 --> Dragon
+    HerbsFail71 --> Dragon
+    HerbsFail72 --> Dragon
+    HerbsFail73 --> Dragon
+    HerbsFail74 --> Dragon
+    HerbsFail75 --> Dragon
+    HerbsFail76 --> Dragon
+    HerbsFail77 --> Dragon
+    HerbsFail78 --> Dragon
+    HerbsFail79 --> Dragon
+    HerbsFail80 --> Dragon
+    HerbsFail81 --> Dragon
+    HerbsFail82 --> Dragon
+    HerbsFail83 --> Dragon
+    HerbsFail84 --> Dragon
+    HerbsFail85 --> Dragon
+    HerbsFail86 --> Dragon
+    HerbsFail87 --> Dragon
+    HerbsFail88 --> Dragon
+    HerbsFail89 --> Dragon
+    HerbsFail90 --> Dragon
+    HerbsFail91 --> Dragon
+    HerbsFail92 --> Dragon
+    HerbsFail93 --> Dragon
+    HerbsFail94 --> Dragon
+    HerbsFail95 --> Dragon
+    HerbsFail96 --> Dragon
+    HerbsFail97 --> Dragon
+    HerbsFail98 --> Dragon
+    HerbsFail99 --> Dragon
+    HerbsFail100 --> Dragon
+    HerbsFail101 --> Dragon
+    HerbsFail102 --> Dragon
+    HerbsFail103 --> Dragon
+    HerbsFail104 --> Dragon
+    HerbsFail105 --> Dragon
+    HerbsFail106 --> Dragon
+    HerbsFail107 --> Dragon
+    HerbsFail108 --> Dragon
+    HerbsFail109 --> Dragon
+    HerbsFail110 --> Dragon
+    HerbsFail111 --> Dragon
+    HerbsFail112 --> Dragon
+    HerbsFail113 --> Dragon
+    HerbsFail114 --> Dragon
+    HerbsFail115 --> Dragon
+    HerbsFail116 --> Dragon
+    HerbsFail117 --> Dragon
+    HerbsFail118 --> Dragon
+    HerbsFail119 --> Dragon
+    HerbsFail120 --> Dragon
+    HerbsFail121 --> Dragon
+    HerbsFail122 --> Dragon
+    HerbsFail123 --> Dragon
+    HerbsFail124 --> Dragon
+    HerbsFail125 --> Dragon
+    HerbsFail126 --> Dragon
+    HerbsFail127 --> Dragon
+    HerbsFail128 --> Dragon
+    HerbsFail129 --> Dragon
+    HerbsFail130 --> Dragon
+    HerbsFail131 --> Dragon
+    HerbsFail132 --> Dragon
+    HerbsFail133 --> Dragon
+    HerbsFail134 --> Dragon
+    HerbsFail135 --> Dragon
+    HerbsFail136 --> Dragon
+    HerbsFail137 --> Dragon
+    HerbsFail138 --> Dragon
+    HerbsFail139 --> Dragon
+    HerbsFail140 --> Dragon
+    HerbsFail141 --> Dragon
+    HerbsFail142 --> Dragon
+    HerbsFail143 --> Dragon
+    HerbsFail144 --> Dragon
+    HerbsFail145 --> Dragon
+    HerbsFail146 --> Dragon
+    HerbsFail147 --> Dragon
+    HerbsFail148 --> Dragon
+    HerbsFail149 --> Dragon
+    HerbsFail150 --> Dragon
+    HerbsFail151 --> Dragon
+    HerbsFail152 --> Dragon
+    HerbsFail153 --> Dragon
+    HerbsFail154 --> Dragon
+    HerbsFail155 --> Dragon
+    HerbsFail156 --> Dragon
+    HerbsFail157 --> Dragon
+    HerbsFail158 --> Dragon
+    HerbsFail159 --> Dragon
+    HerbsFail160 --> Dragon
+    HerbsFail161 --> Dragon
+    HerbsFail162 --> Dragon
+    HerbsFail163 --> Dragon
+    HerbsFail164 --> Dragon
+    HerbsFail165 --> Dragon
+    HerbsFail166 --> Dragon
+    HerbsFail167 --> Dragon
+    HerbsFail168 --> Dragon
+    HerbsFail169 --> Dragon
+    HerbsFail170 --> Dragon
+    HerbsFail171 --> Dragon
+    HerbsFail172 --> Dragon
+    HerbsFail173 --> Dragon
+    HerbsFail174 --> Dragon
+    HerbsFail175 --> Dragon
+    HerbsFail176 --> Dragon
+    HerbsFail177 --> Dragon
+    HerbsFail178 --> Dragon
+    HerbsFail179 --> Dragon
+    HerbsFail180 --> Dragon
+    HerbsFail181 --> Dragon
+    HerbsFail182 --> Dragon
+    HerbsFail183 --> Dragon
+    HerbsFail184 --> Dragon
+    HerbsFail185 --> Dragon
+    HerbsFail186 --> Dragon
+    HerbsFail187 --> Dragon
+    HerbsFail188 --> Dragon
+    HerbsFail189 --> Dragon
+    HerbsFail190 --> Dragon
+    HerbsFail191 --> Dragon
+    HerbsFail192 --> Dragon
+    HerbsFail193 --> Dragon
+    HerbsFail194 --> Dragon
+    HerbsFail195 --> Dragon
+    HerbsFail196 --> Dragon
+    HerbsFail197 --> Dragon
+    HerbsFail198 --> Dragon
+    HerbsFail199 --> Dragon
+    HerbsFail200 --> Dragon
+    HerbsFail201 --> Dragon
+    HerbsFail202 --> Dragon
+    HerbsFail203 --> Dragon
+    HerbsFail204 --> Dragon
+    HerbsFail205 --> Dragon
+    HerbsFail206 --> Dragon
+    HerbsFail207 --> Dragon
+    HerbsFail208 --> Dragon
+    HerbsFail209 --> Dragon
+    HerbsFail210 --> Dragon
+    HerbsFail211 --> Dragon
+    HerbsFail212 --> Dragon
+    HerbsFail213 --> Dragon
+    HerbsFail214 --> Dragon
+    HerbsFail215 --> Dragon
+    HerbsFail216 --> Dragon
+    HerbsFail217 --> Dragon
+    HerbsFail218 --> Dragon
+    HerbsFail219 --> Dragon
+    HerbsFail220 --> Dragon
+    HerbsFail221 --> Dragon
+    HerbsFail222 --> Dragon
+    HerbsFail223 --> Dragon
+    HerbsFail224 --> Dragon
+    HerbsFail225 --> Dragon
+    HerbsFail226 --> Dragon
+    HerbsFail227 --> Dragon
+    HerbsFail228 --> Dragon
+    HerbsFail229 --> Dragon
+    HerbsFail230 --> Dragon
+    HerbsFail231 --> Dragon
+    HerbsFail232 --> Dragon
+    HerbsFail233 --> Dragon
+    HerbsFail234 --> Dragon
+    HerbsFail235 --> Dragon
+    HerbsFail236 --> Dragon
+    HerbsFail237 --> Dragon
+    HerbsFail238 --> Dragon
+    HerbsFail239 --> Dragon
+    HerbsFail240 --> Dragon
+    HerbsFail241 --> Dragon
+    HerbsFail242 --> Dragon
+    HerbsFail243 --> Dragon
+    HerbsFail244 --> Dragon
+    HerbsFail245 --> Dragon
+    HerbsFail246 --> Dragon
+    HerbsFail247 --> Dragon
+    HerbsFail248 --> Dragon
+    HerbsFail249 --> Dragon
+    HerbsFail250 --> Dragon
+    HerbsFail251 --> Dragon
+    HerbsFail252 --> Dragon
+    HerbsFail253 --> Dragon
+    HerbsFail254 --> Dragon
+    HerbsFail255 --> Dragon
+    HerbsFail256 --> Dragon
+    HerbsFail257 --> Dragon
+    HerbsFail258 --> Dragon
+    HerbsFail259 --> Dragon
+    HerbsFail260 --> Dragon
+    HerbsFail261 --> Dragon
+    HerbsFail262 --> Dragon
+    HerbsFail263 --> Dragon
+    HerbsFail264 --> Dragon
+    HerbsFail265 --> Dragon
+    HerbsFail266 --> Dragon
+    HerbsFail267 --> Dragon
+    HerbsFail268 --> Dragon
+    HerbsFail269 --> Dragon
+    HerbsFail270 --> Dragon
+    HerbsFail271 --> Dragon
+    HerbsFail272 --> Dragon
+    HerbsFail273 --> Dragon
+    HerbsFail274 --> Dragon
+    HerbsFail275 --> Dragon
+    HerbsFail276 --> Dragon
+    HerbsFail277 --> Dragon
+    HerbsFail278 --> Dragon
+    HerbsFail279 --> Dragon
+    HerbsFail280 --> Dragon
+    HerbsFail281 --> Dragon
+    HerbsFail282 --> Dragon
+    HerbsFail283 --> Dragon
+    HerbsFail284 --> Dragon
+    HerbsFail285 --> Dragon
+    HerbsFail286 --> Dragon
+    HerbsFail287 --> Dragon
+    HerbsFail288 --> Dragon
+    HerbsFail289 --> Dragon
+    HerbsFail290 --> Dragon
+    HerbsFail291 --> Dragon
+    HerbsFail292 --> Dragon
+    HerbsFail293 --> Dragon
+    HerbsFail294 --> Dragon
+    HerbsFail295 --> Dragon
+    HerbsFail296 --> Dragon
+    HerbsFail297 --> Dragon
+    HerbsFail298 --> Dragon
+    HerbsFail299 --> Dragon
+    HerbsFail300 --> Dragon
+    HerbsFail301 --> Dragon
+    HerbsFail302 --> Dragon
+    HerbsFail303 --> Dragon
+    HerbsFail304 --> Dragon
+    HerbsFail305 --> Dragon
+    HerbsFail306 --> Dragon
+    HerbsFail307 --> Dragon
+    HerbsFail308 --> Dragon
+    HerbsFail309 --> Dragon
+    HerbsFail310 --> Dragon
+    HerbsFail311 --> Dragon
+    HerbsFail312 --> Dragon
+    HerbsFail313 --> Dragon
+    HerbsFail314 --> Dragon
+    HerbsFail315 --> Dragon
+    HerbsFail316 --> Dragon
+    HerbsFail317 --> Dragon
+    HerbsFail318 --> Dragon
+    HerbsFail319 --> Dragon
+    HerbsFail320 --> Dragon
+    HerbsFail321 --> Dragon
+    HerbsFail322 --> Dragon
+    HerbsFail323 --> Dragon
+    HerbsFail324 --> Dragon
+    HerbsFail325 --> Dragon
+    HerbsFail326 --> Dragon
+    HerbsFail327 --> Dragon
+    HerbsFail328 --> Dragon
+    HerbsFail329 --> Dragon
+    HerbsFail330 --> Dragon
+    HerbsFail331 --> Dragon
+    HerbsFail332 --> Dragon
+    HerbsFail333 --> Dragon
+    HerbsFail334 --> Dragon
+    HerbsFail335 --> Dragon
+    HerbsFail336 --> Dragon
+    HerbsFail337 --> Dragon
+    HerbsFail338 --> Dragon
+    HerbsFail339 --> Dragon
+    HerbsFail340 --> Dragon
+    HerbsFail341 --> Dragon
+    HerbsFail342 --> Dragon
+    HerbsFail343 --> Dragon
+    HerbsFail344 --> Dragon
+    HerbsFail345 --> Dragon
+    HerbsFail346 --> Dragon
+    HerbsFail347 --> Dragon
+    HerbsFail348 --> Dragon
+    HerbsFail349 --> Dragon
+    HerbsFail350 --> Dragon
+    HerbsFail351 --> Dragon
+    HerbsFail352 --> Dragon
+    HerbsFail353 --> Dragon
+    HerbsFail354 --> Dragon
+    HerbsFail355 --> Dragon
+    HerbsFail356 --> Dragon
+    HerbsFail357 --> Dragon
+    HerbsFail358 --> Dragon
+    HerbsFail359 --> Dragon
+    HerbsFail360 --> Dragon
+    HerbsFail361 --> Dragon
+    HerbsFail362 --> Dragon
+    HerbsFail363 --> Dragon
+    HerbsFail364 --> Dragon
+    HerbsFail365 --> Dragon
+    HerbsFail366 --> Dragon
+    HerbsFail367 --> Dragon
+    HerbsFail368 --> Dragon
+    HerbsFail369 --> Dragon
+    HerbsFail370 --> Dragon
+    HerbsFail371 --> Dragon
+    HerbsFail372 --> Dragon
+    HerbsFail373 --> Dragon
+    HerbsFail374 --> Dragon
+    HerbsFail375 --> Dragon
+    HerbsFail376 --> Dragon
+    HerbsFail377 --> Dragon
+    HerbsFail378 --> Dragon
+    HerbsFail379 --> Dragon
+    HerbsFail380 --> Dragon
+    HerbsFail381 --> Dragon
+    HerbsFail382 --> Dragon
+    HerbsFail383 --> Dragon
+    HerbsFail384 --> Dragon
+    HerbsFail385 --> Dragon
+    HerbsFail386 --> Dragon
+    HerbsFail387 --> Dragon
+    HerbsFail388 --> Dragon
+    HerbsFail389 --> Dragon
+    HerbsFail390 --> Dragon
+    HerbsFail391 --> Dragon
+    HerbsFail392 --> Dragon
+    HerbsFail393 --> Dragon
+    HerbsFail394 --> Dragon
+    HerbsFail395 --> Dragon
+    HerbsFail396 --> Dragon
+    HerbsFail397 --> Dragon
+    HerbsFail398 --> Dragon
+    HerbsFail399 --> Dragon
+    HerbsFail400 --> Dragon
+    HerbsFail401 --> Dragon
+    HerbsFail402 --> Dragon
+    HerbsFail403 --> Dragon
+    HerbsFail404 --> Dragon
+    HerbsFail405 --> Dragon
+    HerbsFail406 --> Dragon
+    HerbsFail407 --> Dragon
+    HerbsFail408 --> Dragon
+    HerbsFail409 --> Dragon
+    HerbsFail410 --> Dragon
+    HerbsFail411 --> Dragon
+    HerbsFail412 --> Dragon
+    HerbsFail413 --> Dragon
+    HerbsFail414 --> Dragon
+    HerbsFail415 --> Dragon
+    HerbsFail416 --> Dragon
+    HerbsFail417 --> Dragon
+    HerbsFail418 --> Dragon
+    HerbsFail419 --> Dragon
+    HerbsFail420 --> Dragon
+    HerbsFail421 --> Dragon
+    HerbsFail422 --> Dragon
+    HerbsFail423 --> Dragon
+    HerbsFail424 --> Dragon
+    HerbsFail425 --> Dragon
+    HerbsFail426 --> Dragon
+    HerbsFail427 --> Dragon
+    HerbsFail428 --> Dragon
+    HerbsFail429 --> Dragon
+    HerbsFail430 --> Dragon
+    HerbsFail431 --> Dragon
+    HerbsFail432 --> Dragon
+    HerbsFail433 --> Dragon
+    HerbsFail434 --> Dragon
+    HerbsFail435 --> Dragon
+    HerbsFail436 --> Dragon
+    HerbsFail437 --> Dragon
+    HerbsFail438 --> Dragon
+    HerbsFail439 --> Dragon
+    HerbsFail440 --> Dragon
+    HerbsFail441 --> Dragon
+    HerbsFail442 --> Dragon
+    HerbsFail443 --> Dragon
+    HerbsFail444 --> Dragon
+    HerbsFail445 --> Dragon
+    HerbsFail446 --> Dragon
+    HerbsFail447 --> Dragon
+    HerbsFail448 --> Dragon
+    HerbsFail449 --> Dragon
+    HerbsFail450 --> Dragon
+    HerbsFail451 --> Dragon
+    HerbsFail452 --> Dragon
+    HerbsFail453 --> Dragon
+    HerbsFail454 --> Dragon
+    HerbsFail455 --> Dragon
+    HerbsFail456 --> Dragon
+    HerbsFail457 --> Dragon
+    HerbsFail458 --> Dragon
+    HerbsFail459 --> Dragon
+    HerbsFail460 --> Dragon
+    HerbsFail461 --> Dragon
+    HerbsFail462 --> Dragon
+    HerbsFail463 --> Dragon
+    HerbsFail464 --> Dragon
+    HerbsFail465 --> Dragon
+    HerbsFail466 --> Dragon
+    HerbsFail467 --> Dragon
+    HerbsFail468 --> Dragon
+    HerbsFail469 --> Dragon
+    HerbsFail470 --> Dragon
+    HerbsFail471 --> Dragon
+    HerbsFail472 --> Dragon
+    HerbsFail473 --> Dragon
+    HerbsFail474 --> Dragon
+    HerbsFail475 --> Dragon
+    HerbsFail476 --> Dragon
+    HerbsFail477 --> Dragon
+    HerbsFail478 --> Dragon
+    HerbsFail479 --> Dragon
+    HerbsFail480 --> Dragon
+    HerbsFail481 --> Dragon
+    HerbsFail482 --> Dragon
+    HerbsFail483 --> Dragon
+    HerbsFail484 --> Dragon
+    HerbsFail485 --> Dragon
+    HerbsFail486 --> Dragon
+    HerbsFail487 --> Dragon
+    HerbsFail488 --> Dragon
+    HerbsFail489 --> Dragon
+    HerbsFail490 --> Dragon
+    HerbsFail491 --> Dragon
+    HerbsFail492 --> Dragon
+    HerbsFail493 --> Dragon
+    HerbsFail494 --> Dragon
+    HerbsFail495 --> Dragon
+    HerbsFail496 --> Dragon
+    HerbsFail497 --> Dragon
+    HerbsFail498 --> Dragon
+    HerbsFail499 --> Dragon
+    HerbsFail500 --> Dragon
+    HerbsFail501 --> Dragon
+    HerbsFail502 --> Dragon
+    HerbsFail503 --> Dragon
+    HerbsFail504 --> Dragon
+    HerbsFail505 --> Dragon
+    HerbsFail506 --> Dragon
+    HerbsFail507 --> Dragon
+    HerbsFail508 --> Dragon
+    HerbsFail509 --> Dragon
+    HerbsFail510 --> Dragon
+    HerbsFail511 --> Dragon
+    HerbsFail512 --> Dragon
+    HerbsFail513 --> Dragon
+    HerbsFail514 --> Dragon
+    HerbsFail515 --> Dragon
+    HerbsFail516 --> Dragon
+    HerbsFail517 --> Dragon
+    HerbsFail518 --> Dragon
+    HerbsFail519 --> Dragon
+    HerbsFail520 --> Dragon
+    HerbsFail521 --> Dragon
+    HerbsFail522 --> Dragon
+    HerbsFail523 --> Dragon
+    HerbsFail524 --> Dragon
+    HerbsFail525 --> Dragon
+    HerbsFail526 --> Dragon
+    HerbsFail527 --> Dragon
+    HerbsFail528 --> Dragon
+    HerbsFail529 --> Dragon
+    HerbsFail530 --> Dragon
+    HerbsFail531 --> Dragon
+    HerbsFail532 --> Dragon
+    HerbsFail533 --> Dragon
+    HerbsFail534 --> Dragon
+    HerbsFail535 --> Dragon
+    HerbsFail536 --> Dragon
+    HerbsFail537 --> Dragon
+    HerbsFail538 --> Dragon
+    HerbsFail539 --> Dragon
+    HerbsFail540 --> Dragon
+    HerbsFail541 --> Dragon
+    HerbsFail542 --> Dragon
+    HerbsFail543 --> Dragon
+    HerbsFail544 --> Dragon
+    HerbsFail545 --> Dragon
+    HerbsFail546 --> Dragon
+    HerbsFail547 --> Dragon
+    HerbsFail548 --> Dragon
+    HerbsFail549 --> Dragon
+    HerbsFail550 --> Dragon
+    HerbsFail551 --> Dragon
+    HerbsFail552 --> Dragon
+    HerbsFail553 --> Dragon
+    HerbsFail554 --> Dragon
+    HerbsFail555 --> Dragon
+    HerbsFail556 --> Dragon
+    HerbsFail557 --> Dragon
+    HerbsFail558 --> Dragon
+    HerbsFail559 --> Dragon
+    HerbsFail560 --> Dragon
+    HerbsFail561 --> Dragon
+    HerbsFail562 --> Dragon
+    HerbsFail563 --> Dragon
+    HerbsFail564 --> Dragon
+    HerbsFail565 --> Dragon
+    HerbsFail566 --> Dragon
+    HerbsFail567 --> Dragon
+    HerbsFail568 --> Dragon
+    HerbsFail569 --> Dragon
+    HerbsFail570 --> Dragon
+    HerbsFail571 --> Dragon
+    HerbsFail572 --> Dragon
+    HerbsFail573 --> Dragon
+    HerbsFail574 --> Dragon
+    HerbsFail575 --> Dragon
+    HerbsFail576 --> Dragon
+    HerbsFail577 --> Dragon
+    HerbsFail578 --> Dragon
+    HerbsFail579 --> Dragon
+    HerbsFail580 --> Dragon
+    HerbsFail581 --> Dragon
+    HerbsFail582 --> Dragon
+    HerbsFail583 --> Dragon
+    HerbsFail584 --> Dragon
+    HerbsFail585 --> Dragon
+    HerbsFail586 --> Dragon
+    HerbsFail587 --> Dragon
+    HerbsFail588 --> Dragon
+    HerbsFail589 --> Dragon
+    HerbsFail590 --> Dragon
+    HerbsFail591 --> Dragon
+    HerbsFail592 --> Dragon
+    HerbsFail593 --> Dragon
+    HerbsFail594 --> Dragon
+    HerbsFail595 --> Dragon
+    HerbsFail596 --> Dragon
+    HerbsFail597 --> Dragon
+    HerbsFail598 --> Dragon
+    HerbsFail599 --> Dragon
+    HerbsFail600 --> Dragon
+    HerbsFail601 --> Dragon
+    HerbsFail602 --> Dragon
+    HerbsFail603 --> Dragon
+    HerbsFail604 --> Dragon
+    HerbsFail605 --> Dragon
+    HerbsFail606 --> Dragon
+    HerbsFail607 --> Dragon
+    HerbsFail608 --> Dragon
+    HerbsFail609 --> Dragon
+    HerbsFail610 --> Dragon
+    HerbsFail611 --> Dragon
+    HerbsFail612 --> Dragon
+    HerbsFail613 --> Dragon
+    HerbsFail614 --> Dragon
+    HerbsFail615 --> Dragon
+    HerbsFail616 --> Dragon
+    HerbsFail617 --> Dragon
+    HerbsFail618 --> Dragon
+    HerbsFail619 --> Dragon
+    HerbsFail620 --> Dragon
+    HerbsFail621 --> Dragon
+    HerbsFail622 --> Dragon
+    HerbsFail623 --> Dragon
+    HerbsFail624 --> Dragon
+    HerbsFail625 --> Dragon
+    HerbsFail626 --> Dragon
+    HerbsFail627 --> Dragon
+    HerbsFail628 --> Dragon
+    HerbsFail629 --> Dragon
+    HerbsFail630 --> Dragon
+    HerbsFail631 --> Dragon
+    HerbsFail632 --> Dragon
+    HerbsFail633 --> Dragon
+    HerbsFail634 --> Dragon
+    HerbsFail635 --> Dragon
+    HerbsFail636 --> Dragon
+    HerbsFail637 --> Dragon
+    HerbsFail638 --> Dragon
+    HerbsFail639 --> Dragon
+    HerbsFail640 --> Dragon
+    HerbsFail641 --> Dragon
+    HerbsFail642 --> Dragon
+    HerbsFail643 --> Dragon
+    HerbsFail644 --> Dragon
+    HerbsFail645 --> Dragon
+    HerbsFail646 --> Dragon
+    HerbsFail647 --> Dragon
+    HerbsFail648 --> Dragon
+    HerbsFail649 --> Dragon
+    HerbsFail650 --> Dragon
+    HerbsFail651 --> Dragon
+    HerbsFail652 --> Dragon
+    HerbsFail653 --> Dragon
+    HerbsFail654 --> Dragon
+    HerbsFail655 --> Dragon
+    HerbsFail656 --> Dragon
+    HerbsFail657 --> Dragon
+    HerbsFail658 --> Dragon
+    HerbsFail659 --> Dragon
+    HerbsFail660 --> Dragon
+    HerbsFail661 --> Dragon
+    HerbsFail662 --> Dragon
+    HerbsFail663 --> Dragon
+    HerbsFail664 --> Dragon
+    HerbsFail665 --> Dragon
+    HerbsFail666 --> Dragon
+    HerbsFail667 --> Dragon
+    HerbsFail668 --> Dragon
+    HerbsFail669 --> Dragon
+    HerbsFail670 --> Dragon
+    HerbsFail671 --> Dragon
+    HerbsFail672 --> Dragon
+    HerbsFail673 --> Dragon
+    HerbsFail674 --> Dragon
+    HerbsFail675 --> Dragon
+    HerbsFail676 --> Dragon
+    HerbsFail677 --> Dragon
+    HerbsFail678 --> Dragon
+    HerbsFail679 --> Dragon
+    HerbsFail680 --> Dragon
+    HerbsFail681 --> Dragon
+    HerbsFail682 --> Dragon
+    HerbsFail683 --> Dragon
+    HerbsFail684 --> Dragon
+    HerbsFail685 --> Dragon
+    HerbsFail686 --> Dragon
+    HerbsFail687 --> Dragon
+    HerbsFail688 --> Dragon
+    HerbsFail689 --> Dragon
+    HerbsFail690 --> Dragon
+    HerbsFail691 --> Dragon
+    HerbsFail692 --> Dragon
+    HerbsFail693 --> Dragon
+    HerbsFail694 --> Dragon
+    HerbsFail695 --> Dragon
+    HerbsFail696 --> Dragon
+    HerbsFail697 --> Dragon
+    HerbsFail698 --> Dragon
+    HerbsFail699 --> Dragon
+    HerbsFail700 --> Dragon
+
+    Dragon --> StrategyChoice{Стратегия боя}
+    StrategyChoice -->|Эхо| EchoStrategy{Знает ритм?}
+    StrategyChoice -->|Травы| HerbsStrategy{Знает травы?}
+    StrategyChoice -->|Сокол| SokolHelp[Помощь Сокола]
+    StrategyChoice -->|Лоб в лоб| BruteForce
+
+    EchoStrategy -->|Да| DragonVictory[🏆 Победа над драконом]
+    EchoStrategy -->|Нет| DragonDefeat[💀 Поражение]
+
+    HerbsStrategy -->|Да| DragonVictory
+    HerbsStrategy -->|Нет| DragonDefeat
+
+    SokolHelp --> DragonVictory
+
+    BruteForce --> SkillCheck{Навыки >= 1?}
+    SkillCheck -->|Да| DragonVictory
+    SkillCheck -->|Нет| DragonDefeat
+
+    DragonDefeat --> RetryChoice{Повторить уроки?}
+    RetryChoice -->|Звёзды| Stars
+    RetryChoice -->|Загадки| Riddles
+    RetryChoice -->|Травы| Herbs
+    RetryChoice -->|Снова в бой| Dragon
+
+    DragonVictory --> FeatherChoice{Взять перо?}
+    FeatherChoice -->|Да| EndingChoice{Проверка концовок}
+    FeatherChoice -->|Нет| Retreat[Конец: Отступление]
+
+    EndingChoice --> EndingLogic{Условия}
+    EndingLogic -->|Все уроки| EndingHarmony[🎭 Конец: Гармония]
+    EndingLogic -->|Гребень без навигации| EndingFall[😵 Конец: Падение]
+    EndingLogic -->|Нет навыков| EndingLost[😞 Конец: Заблудилась]
+    EndingLogic -->|Без навигации| EndingSolo[🚶 Конец: Одинокий путь]
+    EndingLogic -->|Навигация + не пещера| EndingPathfinders[🧭 Конец: Следопыты]
+    EndingLogic -->|Иначе| EndingReflection[🤔 Конец: Размышление]
+
+    %% СТИЛИЗАЦИЯ
+    classDef start fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef lesson fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef success fill:#c8e6c9,stroke:#1b5e20,stroke-width:2px
+    classDef failure fill:#ffcdd2,stroke:#b71c1c,stroke-width:2px
+    classDef battle fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef victory fill:#c8e6c9,stroke:#1b5e20,stroke-width:2px
+    classDef defeat fill:#ffcdd2,stroke:#b71c1c,stroke-width:2px
+    classDef ending fill:#e8eaf6,stroke:#1a237e,stroke-width:2px
+
+    class Start,Choice1 start
+    class Stars,LessonStars,StarsTest,Riddles,LessonRiddles,Herbs,LessonHerbs lesson
+    class StarsSuccess,RhythmSuccess,HerbsSuccess success
+    class StarsFail1,StarsFail2,StarsFail3,StarsFail4,StarsFailure,RhythmFail1,RhythmFail2,RhythmFail3,RhythmFail4,RhythmFailure,HerbsFail1,HerbsFail2,HerbsFail3,HerbsFail4,HerbsFailure failure
+    class Dragon,StrategyChoice,BattleChoice battle
+    class DragonVictory victory
+    class DragonDefeat defeat
+    class EndingHarmony,EndingFall,EndingLost,EndingSolo,EndingPathfinders,EndingReflection,Retreat ending
+```

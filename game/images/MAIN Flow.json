@@ -1,0 +1,1990 @@
+{
+  "name": "MAIN Flow",
+  "nodes": [
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c",
+          "mode": "list",
+          "cachedResultName": "Агент ИИ_Справочники",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1803496084,
+          "mode": "list",
+          "cachedResultName": "Ключевые слова",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c/edit#gid=1803496084"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -2048,
+        1136
+      ],
+      "id": "bb1a9055-c3c9-44ab-bbf2-ba5da1b44530",
+      "name": "Get row(s) in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "eKEjzVQzivnsTVn8",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -1872,
+        1136
+      ],
+      "id": "6b7c3d5e-f48c-4e9f-ab87-c84fd19118b7",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "name": "Replace Me",
+      "typeVersion": 1,
+      "position": [
+        -1088,
+        1152
+      ],
+      "id": "ba8f83c3-f3d4-49e8-9206-3606550e9ee1"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "AN2anj1uwz8LRt8W",
+          "mode": "list",
+          "cachedResultName": "query_position"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        -1648,
+        1152
+      ],
+      "id": "9107a3af-7045-4153-afab-6119f31710f3",
+      "name": "Execute Workflow"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Генерируем случайное целое время от 1 до 3 секунд\nconst minSeconds = 1;\nconst maxSeconds = 3;\n\n// Генерируем случайное целое число от 1 до 3 секунд включительно\nconst delay = Math.floor(Math.random() * (maxSeconds - minSeconds + 1)) + minSeconds;\n\n// Возвращаем результат\nreturn [\n  {\n    json: {\n      delaySeconds: delay\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1456,
+        1152
+      ],
+      "id": "e09f0b98-a623-4979-99ac-a7a81eacfc5d",
+      "name": "рандом задержка 1-3"
+    },
+    {
+      "parameters": {
+        "amount": "={{ $json.delaySeconds }}"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -1264,
+        1152
+      ],
+      "id": "ca9de661-fdcb-456b-a1b9-ea7b2a7a825c",
+      "name": "Wait",
+      "webhookId": "567a7f4b-a2f9-4f16-88a0-152cd556093e"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c",
+          "mode": "list",
+          "cachedResultName": "Агент ИИ_Справочники",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Конкуренты",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -608,
+        1136
+      ],
+      "id": "0aa2e35b-598b-4629-8892-eff331ebe5eb",
+      "name": "Get row(s) in sheet1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "eKEjzVQzivnsTVn8",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -240,
+        1136
+      ],
+      "id": "f2b67e1e-5835-4ff1-ae85-c562ea2a1e29",
+      "name": "Loop Over Items1"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "bjgurbzyGzcYSh7B",
+          "mode": "list",
+          "cachedResultName": "Wb_analit_конкуренты"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "article": "={{ $json.article }}"
+          },
+          "matchingColumns": [
+            "article"
+          ],
+          "schema": [
+            {
+              "id": "article",
+              "displayName": "article",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "number",
+              "removed": false
+            },
+            {
+              "id": "keyword",
+              "displayName": "keyword",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        -16,
+        1152
+      ],
+      "id": "a6b6e229-d507-4391-8353-428821343a22",
+      "name": "Execute Workflow1"
+    },
+    {
+      "parameters": {
+        "amount": "={{ $json.delaySeconds }}"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        352,
+        1152
+      ],
+      "id": "d3c455e0-4198-4234-806b-2e506134bfa4",
+      "name": "Wait1",
+      "webhookId": "567a7f4b-a2f9-4f16-88a0-152cd556093e"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "name": "Replace Me1",
+      "typeVersion": 1,
+      "position": [
+        528,
+        1152
+      ],
+      "id": "cbe11865-b671-436e-8ba2-575ef742c711"
+    },
+    {
+      "parameters": {
+        "jsCode": "const inputData = $input.all();\nconst uniqueCompetitors = new Set();\nconst outputItems = [];\n\nfor (const item of inputData) {\n  const competitor = item.json[\"Конкурент\"];\n  \n  // Проверяем что конкурент существует и не пустой\n  if (competitor && competitor !== \"\" && !uniqueCompetitors.has(competitor)) {\n    uniqueCompetitors.add(competitor);\n    \n    outputItems.push({\n      json: {\n        article: competitor\n      }\n    });\n  }\n}\n\nreturn outputItems;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -416,
+        1136
+      ],
+      "id": "9d9812db-92ea-4878-899d-a5d8c57e3ae3",
+      "name": "Убираем повторы"
+    },
+    {
+      "parameters": {
+        "content": "Аналитика номера позиции в поисковой выдачи по ключевым словам   ПРОМАРКЕТ",
+        "height": 336,
+        "width": 1472,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2352,
+        1056
+      ],
+      "id": "46f67f1b-02ab-4ed5-bd5b-8a4a4a9bc42b",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "Аналитика конкурентов",
+        "height": 336,
+        "width": 1568,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -864,
+        1056
+      ],
+      "id": "26adf5bd-43c9-41f1-83c6-350564293c91",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -832,
+        1136
+      ],
+      "id": "bb6a6926-fde6-4c15-86ce-6b2cd69cf8c2",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -2256,
+        1136
+      ],
+      "id": "e34166aa-1975-48ee-979c-417b0c916ab2",
+      "name": "Schedule Trigger1"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c",
+          "mode": "list",
+          "cachedResultName": "Агент ИИ_Справочники",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1803496084,
+          "mode": "list",
+          "cachedResultName": "Ключевые слова",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c/edit#gid=1803496084"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        80,
+        1456
+      ],
+      "id": "9c3300d8-b609-44ab-8d6d-077f3a97e2ba",
+      "name": "Get row(s) in sheet2",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "eKEjzVQzivnsTVn8",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        320,
+        1456
+      ],
+      "id": "6eb33bfc-c9c2-47dc-8fa5-ec6aaf79897c",
+      "name": "Loop Over Items2"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "name": "Replace Me2",
+      "typeVersion": 1,
+      "position": [
+        1168,
+        1472
+      ],
+      "id": "e9a18b7a-98cb-4e70-bd79-41f7c27341d9"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "MaDzD6yOg0MmRbqi",
+          "mode": "list",
+          "cachedResultName": "competitors_query_position"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "query": "={{ $json['Ключевые слова'] }}",
+            "CompetitorSkus": "={{ $('Уникальные sku конкурентов').first().json.CompetitorSkus }}"
+          },
+          "matchingColumns": [
+            "query"
+          ],
+          "schema": [
+            {
+              "id": "query",
+              "displayName": "query",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "CompetitorSkus",
+              "displayName": "CompetitorSkus",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "array",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        544,
+        1472
+      ],
+      "id": "8a5aff44-c153-4e04-96a1-4f10f4c7e8ec",
+      "name": "Execute Workflow2"
+    },
+    {
+      "parameters": {
+        "amount": "={{ $json.delaySeconds }}"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        944,
+        1472
+      ],
+      "id": "23a54fc9-58b5-44aa-9601-159b3dae1bb7",
+      "name": "Wait2",
+      "webhookId": "567a7f4b-a2f9-4f16-88a0-152cd556093e"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Генерируем случайное целое время от 1 до 3 секунд\nconst minSeconds = 1;\nconst maxSeconds = 3;\n\n// Генерируем случайное целое число от 1 до 3 секунд включительно\nconst delay = Math.floor(Math.random() * (maxSeconds - minSeconds + 1)) + minSeconds;\n\n// Возвращаем результат\nreturn [\n  {\n    json: {\n      delaySeconds: delay\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        736,
+        1472
+      ],
+      "id": "f234e011-99c7-4234-9bac-b3ed861ff1a6",
+      "name": "рaндом задержка 1-3"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Генерируем случайное целое время от 1 до 3 секунд\nconst minSeconds = 1;\nconst maxSeconds = 3;\n\n// Генерируем случайное целое число от 1 до 3 секунд включительно\nconst delay = Math.floor(Math.random() * (maxSeconds - minSeconds + 1)) + minSeconds;\n\n// Возвращаем результат\nreturn [\n  {\n    json: {\n      delaySeconds: delay\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        160,
+        1152
+      ],
+      "id": "e0f00d39-1852-4bc6-8f31-d2af77c83b83",
+      "name": "рандoм задержка 1-3"
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        -144,
+        1456
+      ],
+      "id": "5eaa2e86-caa9-4507-b534-3d83e89a25f6",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c",
+          "mode": "list",
+          "cachedResultName": "Агент ИИ_Справочники",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Конкуренты",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -560,
+        1456
+      ],
+      "id": "4882b734-92cd-4ca0-a187-5d0f7bb3b72d",
+      "name": "Связь конкурента и нашего sku",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "eKEjzVQzivnsTVn8",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Извлекаем все конкурентные SKU из данных\nconst competitorSkus = $items().map(item => item.json[\"Конкурент\"]);\n\n// Создаем массив уникальных значений\nconst uniqueCompetitorSkus = [...new Set(competitorSkus)];\n\nreturn [{\n  json: {\n    CompetitorSkus: uniqueCompetitorSkus\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -320,
+        1456
+      ],
+      "id": "8e202fc7-de0f-4677-848a-99cfaa806756",
+      "name": "Уникальные sku конкурентов"
+    },
+    {
+      "parameters": {
+        "content": "Аналитика номера позиции в поисковой выдачи по ключевым словам КОНКУРЕНТЫ",
+        "height": 336,
+        "width": 2256,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -864,
+        1408
+      ],
+      "id": "ec40b039-9aca-4ec0-8834-05fd9de6b63f",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c",
+          "mode": "list",
+          "cachedResultName": "Агент ИИ_Справочники",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1566534814,
+          "mode": "list",
+          "cachedResultName": "Номенклатура",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c/edit#gid=1566534814"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -2176,
+        784
+      ],
+      "id": "43ee37b5-f5ce-4f5e-bb67-15719279e8a3",
+      "name": "Get row(s) in sheet3",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "eKEjzVQzivnsTVn8",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 10,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -1712,
+        784
+      ],
+      "id": "daba34af-ea5d-4377-ad1b-a679cb2bcb43",
+      "name": "Loop Over Items3"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "name": "Replace Me3",
+      "typeVersion": 1,
+      "position": [
+        -1056,
+        800
+      ],
+      "id": "d4d870ba-9582-4192-aa04-23ca716e96c7"
+    },
+    {
+      "parameters": {
+        "content": "СПРАВОЧНИК SKU ПРОМАРКЕТ",
+        "height": 304,
+        "width": 1568,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2448,
+        736
+      ],
+      "id": "454df11d-4c96-4347-840e-3e03a49bc95a",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -816,
+        1456
+      ],
+      "id": "0edbcd00-4a96-462c-9bdc-4566cffed710",
+      "name": "Schedule Trigger3"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://default:otlehjoq@promarket.3r.agency:8123",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=INSERT INTO promarket_analytics.promarket_nomenclature (timestamp, sku, sku_name, volume, barcode, name, brand, manager, seller) VALUES ('{{ $json.timestamp }}', '{{ $json.sku }}', '{{ $json.sku_name }}', round({{ $json.volume }}, 2), '{{ $json.barcode }}', '{{ $json.name }}', '{{ $json.brand }}', '{{ $json.manager }}', '{{ $json.seller }}')"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/x-www-form-urlencoded"
+            }
+          ]
+        },
+        "options": {
+          "batching": {
+            "batch": {
+              "batchSize": 10
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1472,
+        800
+      ],
+      "id": "9816d218-eafe-4ea6-967b-446e94009e14",
+      "name": "HTTP Request1"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c",
+          "mode": "list",
+          "cachedResultName": "Агент ИИ_Справочники",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Конкуренты",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -656,
+        816
+      ],
+      "id": "fbe3bbd5-58ff-4f9f-8bee-0bc51e50c2d7",
+      "name": "Get row(s) in sheet4",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "eKEjzVQzivnsTVn8",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -320,
+        816
+      ],
+      "id": "d11c6451-0e83-4b4b-bb64-9dd78237e035",
+      "name": "Loop Over Items4"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "name": "Replace Me4",
+      "typeVersion": 1,
+      "position": [
+        32,
+        832
+      ],
+      "id": "19fe5423-eb5a-4db6-b955-b282c67b582d"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://default:otlehjoq@promarket.3r.agency:8123",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=INSERT INTO promarket_analytics.competitors (relation, sku) \nVALUES ({{ $json.relation }},{{ $json.sku }})"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/x-www-form-urlencoded"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -112,
+        832
+      ],
+      "id": "93a2559e-630e-4fec-86d0-dbf4301930d6",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4e1755e3-5a98-4f86-9016-268f223e9664",
+              "name": "relation",
+              "value": "={{ $json['Наш артикул WB'] }}",
+              "type": "string"
+            },
+            {
+              "id": "b0822ca8-20f6-47dd-bf80-c49dd685934d",
+              "name": "sku",
+              "value": "={{ $json['Конкурент'] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -512,
+        816
+      ],
+      "id": "69c6a941-6700-4f3a-a13d-8b235f90781c",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "content": "СПРАВОЧНИК SKU КОНКУРЕНТЫ",
+        "height": 304,
+        "width": 1024,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -864,
+        736
+      ],
+      "id": "8f0c4337-0359-42bd-b48f-81188613a6cb",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 9
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -1296,
+        1456
+      ],
+      "id": "6ab0b17d-53c7-4184-ba4b-fb0e4fd09a62",
+      "name": "Schedule Trigger2"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://default:otlehjoq@promarket.3r.agency:8123",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=DELETE FROM promarket_analytics.query_position WHERE toDate(timestamp) < subtractDays(toDate(now()), 14)"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/x-www-form-urlencoded"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1072,
+        1456
+      ],
+      "id": "bdc7452f-f96a-4284-b942-1465093e699d",
+      "name": "HTTP Request2"
+    },
+    {
+      "parameters": {
+        "content": "Очищение query_position",
+        "height": 208,
+        "width": 480
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1360,
+        1408
+      ],
+      "id": "2fe1dbd0-3f38-44ab-b08a-0d5e0113bd20",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 9
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -1792,
+        1456
+      ],
+      "id": "240691c1-ddf8-413e-a424-b84b3dc36db7",
+      "name": "Schedule Trigger4"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://default:otlehjoq@promarket.3r.agency:8123",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=DELETE FROM promarket_analytics.competitors_product_info WHERE toDate(timestamp) < subtractDays(toDate(now()), 14)"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/x-www-form-urlencoded"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1568,
+        1456
+      ],
+      "id": "bc877e6a-4b07-4e72-b412-641b6e4dbfd3",
+      "name": "HTTP Request3"
+    },
+    {
+      "parameters": {
+        "content": "Очищение competitors_product_info",
+        "height": 208,
+        "width": 480
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1856,
+        1408
+      ],
+      "id": "eb149698-ecb2-4fc8-a547-6f51edd64041",
+      "name": "Sticky Note6"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 9
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -2288,
+        1456
+      ],
+      "id": "33ed1cba-1bd5-432d-aaf1-fd4e1ab5014d",
+      "name": "Schedule Trigger5"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://default:otlehjoq@promarket.3r.agency:8123",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "=DELETE FROM promarket_analytics.competitors_product_warehouse WHERE toDate(timestamp) < subtractDays(toDate(now()), 14)"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/x-www-form-urlencoded"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2064,
+        1456
+      ],
+      "id": "90e4894a-2563-4501-84ba-df8a80e9e980",
+      "name": "HTTP Request4"
+    },
+    {
+      "parameters": {
+        "content": "Очищение competitors_product_warehouse",
+        "height": 208,
+        "width": 480
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2352,
+        1408
+      ],
+      "id": "f9786ec1-f855-4c82-addc-f95bf5225cc7",
+      "name": "Sticky Note7"
+    },
+    {
+      "parameters": {
+        "content": "ЗАКАЗЫ ПРОМАРКЕТ ЗА ВЧЕРАШНИЙ ДЕНЬ",
+        "height": 384,
+        "width": 2032,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1872,
+        336
+      ],
+      "id": "10eede79-70fa-4763-95cd-179875d664c5",
+      "name": "Sticky Note8"
+    },
+    {
+      "parameters": {
+        "operation": "set",
+        "key": "promarket:settings",
+        "value": "={\n\"wb_promarket\": {\n    \"api_key\": \"eyJhbGciOiJFUzI1NiIsImtpZCI6IjIwMjUwNTIwdjEiLCJ0eXAiOiJKV1QifQ.eyJlbnQiOjEsImV4cCI6MTc3MTAxMjIwMSwiaWQiOiIwMTk4YWNiNS0wODA5LTcyYWYtOTI4Mi1jNzE2OTM5Y2U1OWUiLCJpaWQiOjQ0NDU1NTAzLCJvaWQiOjk2MDM5NCwicyI6MTA3Mzc1Nzk1MCwic2lkIjoiNWIzNGNlOGUtNzAxYi00ZDQzLWI2YWMtZmUyNmMwNTI1YjNjIiwidCI6ZmFsc2UsInVpZCI6NDQ0NTU1MDN9.AwdXdmbhjy7aptj4mbpT764DPU2CCGjYl0FBRcHKxmGK_n9OnAP457xwdazErQDf5gh7q6tZ3JHRyOj6wgbabw\"\n},\n\"wb_sokolov\": {\n    \"api_key\": \"eyJhbGciOiJFUzI1NiIsImtpZCI6IjIwMjUwNTIwdjEiLCJ0eXAiOiJKV1QifQ.eyJlbnQiOjEsImV4cCI6MTc3MTAxMjE2MiwiaWQiOiIwMTk4YWNiNC02YzJhLTc1ODctYjkyZS00NWI4NWZmYmZjYTUiLCJpaWQiOjQ0NDU1NTAzLCJvaWQiOjY2MzU3LCJzIjoxMDczNzU3OTUwLCJzaWQiOiI0Nzg2YTFlMC1mODc0LTUyYTktOGQ5Ny04YjRkYzg4MWJlZGMiLCJ0IjpmYWxzZSwidWlkIjo0NDQ1NTUwM30.YIAnqsy9XRQ0_3PnVCTaQzUHgbKQur1kH-ULzJ9iX_lB8JF3YgWGxVTUBv9nIcokFRIVLNkKREfkjxsvJO8KWw\"\n}\n\n}",
+        "keyType": "string"
+      },
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        -1360,
+        96
+      ],
+      "id": "df91d83d-0c69-4753-8445-ebaf0278a2fc",
+      "name": "InitSettings",
+      "credentials": {
+        "redis": {
+          "id": "Dib9U66mNtv7CeCJ",
+          "name": "Redis_0"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b5b1aacc-3cf2-4db5-8166-6bee28af80c9",
+              "name": "settings",
+              "value": "={{ $json.data.parseJson() }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -832,
+        464
+      ],
+      "id": "522bf8ff-e5be-483b-829f-4ebb4c031e72",
+      "name": "SettingsData"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "propertyName": "data",
+        "key": "promarket:settings",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        -976,
+        464
+      ],
+      "id": "4b63f2ba-37f4-4aed-8949-6926c4dd4646",
+      "name": "Settings",
+      "credentials": {
+        "redis": {
+          "id": "Dib9U66mNtv7CeCJ",
+          "name": "Redis_0"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c",
+          "mode": "list",
+          "cachedResultName": "Агент ИИ_Справочники",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1566534814,
+          "mode": "list",
+          "cachedResultName": "Номенклатура",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12Gnaa69iDb7L53dZMdgLvmoIaLP44PfghXz2de7Oh2c/edit#gid=1566534814"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -1328,
+        464
+      ],
+      "id": "9d1ebbdf-efd3-4d28-bc7c-50b2fbf103c3",
+      "name": "Get row(s) in sheet5",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "eKEjzVQzivnsTVn8",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        -1104,
+        464
+      ],
+      "id": "c8bc2ede-41cb-428a-9fe8-bec060ea845d",
+      "name": "Aggregate1"
+    },
+    {
+      "parameters": {
+        "jsCode": "const sellerName = \"Соколов ИП\";\n\n// Берём данные из ноды \"Get row(s) in sheet5\"\nconst rows = $items(\"Get row(s) in sheet5\", 0, 0);\n\n// Пропускаем первый элемент (заголовок) и фильтруем по условиям\nconst filtered = rows\n  .slice(1) // Пропускаем первый item\n  .filter(item => {\n    const jurLico = item.json[\"На каком ЛК находится соответствующий артикул\"];\n    const platform = item.json[\"WB/OZ\"];\n    const actualDate = item.json[\"Актуальная дата\"];\n    \n    // Проверяем что это нужное юр. лицо, платформа WB и есть актуальная дата\n    return jurLico === sellerName && \n           platform === \"WB\" && \n           actualDate && \n           actualDate !== \"Дата\"; // Исключаем заголовочную строку\n  });\n\n// Собираем список артикулов из колонки col_7\nconst skus = filtered.map(item => item.json.col_7).filter(sku => sku != null);\n\n// Возвращаем итог\nreturn [\n  {\n    json: {\n      Seller_name: sellerName,\n      Seller_sku: skus\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -640,
+        368
+      ],
+      "id": "6ed01ff2-9f9d-444b-ba01-d37143996016",
+      "name": "Соколов ИП"
+    },
+    {
+      "parameters": {
+        "jsCode": "const sellerName = \"Промаркет ООО\";\n\n// Берём данные из ноды \"Get row(s) in sheet5\"\nconst rows = $items(\"Get row(s) in sheet5\", 0, 0);\n\n// Пропускаем первый элемент (заголовок) и фильтруем по условиям\nconst filtered = rows\n  .slice(1) // Пропускаем первый item\n  .filter(item => {\n    const jurLico = item.json[\"На каком ЛК находится соответствующий артикул\"];\n    const platform = item.json[\"WB/OZ\"];\n    const actualDate = item.json[\"Актуальная дата\"];\n    \n    // Проверяем что это нужное юр. лицо, платформа WB и есть актуальная дата\n    return jurLico === sellerName && \n           platform === \"WB\" && \n           actualDate && \n           actualDate !== \"Дата\"; // Исключаем заголовочную строку\n  });\n\n// Собираем список артикулов из колонки col_7\nconst skus = filtered.map(item => item.json.col_7).filter(sku => sku != null);\n\n// Возвращаем итог\nreturn [\n  {\n    json: {\n      Seller_name: sellerName,\n      Seller_sku: skus\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -640,
+        544
+      ],
+      "id": "b5140a3a-d632-4382-8808-0ac3634c03e6",
+      "name": "Промаркет"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Получаем вчерашнюю дату\nconst yesterday = new Date();\nyesterday.setDate(yesterday.getDate() - 1);\n\n// Форматируем в нужный формат YYYY-MM-DD\nconst formattedDate = yesterday.toISOString().split('T')[0];\n\nreturn [{ json: { date: formattedDate } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1536,
+        464
+      ],
+      "id": "5b82c377-c62b-4b97-8505-d900661d4c49",
+      "name": "Дата вчерашнего дня"
+    },
+    {
+      "parameters": {
+        "amount": 60
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -192,
+        368
+      ],
+      "id": "5e6877ed-77dc-43d1-b31f-577fffe7346a",
+      "name": "Wait3",
+      "webhookId": "a53f8773-9369-4346-a16b-c1afdd0b7024"
+    },
+    {
+      "parameters": {
+        "amount": 60
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -192,
+        544
+      ],
+      "id": "27985db8-1f76-4e99-9c4e-fca262e69cb4",
+      "name": "Wait4",
+      "webhookId": "a53f8773-9369-4346-a16b-c1afdd0b7024"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "NR13m1282IfnQUBx",
+          "mode": "list",
+          "cachedResultName": "promarker_sales_daily"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Seller_name": "={{ $('Соколов ИП').first().json.Seller_name }}",
+            "Seller_sku": "={{ $('Соколов ИП').first().json.Seller_sku }}",
+            "api_key": "={{ $('SettingsData').first().json.settings.wb_sokolov.api_key }}",
+            "date": "={{ $('Дата вчерашнего дня').first().json.date }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Seller_name",
+              "displayName": "Seller_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "Seller_sku",
+              "displayName": "Seller_sku",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "array"
+            },
+            {
+              "id": "api_key",
+              "displayName": "api_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "date",
+              "displayName": "date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        -400,
+        368
+      ],
+      "id": "836d940d-c970-44fe-9be4-6e65593ea1b1",
+      "name": "Дневные заказы"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "NR13m1282IfnQUBx",
+          "mode": "list",
+          "cachedResultName": "promarker_sales_daily"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Seller_name": "={{ $('Промаркет').first().json.Seller_name }}",
+            "Seller_sku": "={{ $('Промаркет').first().json.Seller_sku }}",
+            "api_key": "={{ $('SettingsData').first().json.settings.wb_promarket.api_key }}",
+            "date": "={{ $('Дата вчерашнего дня').first().json.date }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Seller_name",
+              "displayName": "Seller_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "Seller_sku",
+              "displayName": "Seller_sku",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "array"
+            },
+            {
+              "id": "api_key",
+              "displayName": "api_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "date",
+              "displayName": "date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        -384,
+        544
+      ],
+      "id": "842d72a5-9fb2-4676-9368-6a2a64b98adb",
+      "name": "Дневные зaказы"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Получаем текущую дату для сравнения\nconst today = new Date();\ntoday.setHours(0, 0, 0, 0);\n\n// Функция для парсинга даты в формате DD.MM.YYYY\nfunction parseDate(dateString) {\n  if (!dateString || dateString === 'Дата') return null;\n  \n  const parts = dateString.split('.');\n  if (parts.length !== 3) return null;\n  \n  const day = parseInt(parts[0]);\n  const month = parseInt(parts[1]) - 1; // месяцы в JS начинаются с 0\n  const year = parseInt(parts[2]);\n  \n  return new Date(year, month, day);\n}\n\n// Обрабатываем входящие данные\nconst filteredItems = [];\n\nfor (const item of $input.all()) {\n  const data = item.json;\n  \n  // Пропускаем заголовок\n  if (data.row_number === 2) continue;\n  \n  // Проверяем, что это WB площадка\n  if (data['WB/OZ'] !== 'WB') continue;\n  \n  // Проверяем актуальную дату\n  const actualDate = parseDate(data['Актуальная дата']);\n  if (!actualDate || actualDate > today) continue;\n  \n  // Формируем объект для вставки в ClickHouse\n  const processedItem = {\n    timestamp: actualDate.toISOString().split('T')[0], // формат YYYY-MM-DD\n    sku: String(data.col_7 || ''),\n    sku_name: String(data['Данное поле для более удобного поиска в сервисе'] || ''),\n    volume: parseFloat(data.col_10) || 0.0,\n    barcode: String(data.col_9 || ''),\n    name: String(data.col_6 || ''),\n    brand: String(data['Отчет из ЛК ЛК >>> Аналитика >>> Отчеты >>> Отчёт с перечнем номенклатур (выбраны все столбцы) >>> выгрузка'] || ''),\n    manager: String(data['Менеджер который отвечает/ведет данный товар'] || ''),\n    seller: String(data['На каком ЛК находится соответствующий артикул'] || '')\n  };\n  \n  filteredItems.push({ json: processedItem });\n}\n\nreturn filteredItems;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1968,
+        784
+      ],
+      "id": "b9c4640f-2666-445a-a2ad-ceec714a2ce9",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "amount": 1
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -1264,
+        800
+      ],
+      "id": "f34d0904-cd7d-4ec1-a486-23ac21eda9b6",
+      "name": "Wait5",
+      "webhookId": "4fdc9b9a-9ed8-4c7c-aa8d-b066f7eaba9a"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 7
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -1776,
+        464
+      ],
+      "id": "d9a261da-3d8f-43f7-b691-fff5ae9061ca",
+      "name": "Schedule Trigger6"
+    }
+  ],
+  "pinData": {
+    "Schedule Trigger2": [
+      {
+        "json": {
+          "timestamp": "2025-09-26T09:00:24.015+03:00",
+          "Readable date": "September 26th 2025, 9:00:24 am",
+          "Readable time": "9:00:24 am",
+          "Day of week": "Friday",
+          "Year": "2025",
+          "Month": "September",
+          "Day of month": "26",
+          "Hour": "09",
+          "Minute": "00",
+          "Second": "24",
+          "Timezone": "Europe/Moscow (UTC+03:00)"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Execute Workflow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Replace Me": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Workflow": {
+      "main": [
+        [
+          {
+            "node": "рандом задержка 1-3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "рандом задержка 1-3": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Replace Me",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet1": {
+      "main": [
+        [
+          {
+            "node": "Убираем повторы",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items1": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Execute Workflow1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Workflow1": {
+      "main": [
+        [
+          {
+            "node": "рандoм задержка 1-3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "Replace Me1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Replace Me1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Убираем повторы": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger1": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet2": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items2": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Execute Workflow2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Workflow2": {
+      "main": [
+        [
+          {
+            "node": "рaндом задержка 1-3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait2": {
+      "main": [
+        [
+          {
+            "node": "Replace Me2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "рaндом задержка 1-3": {
+      "main": [
+        [
+          {
+            "node": "Wait2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "рандoм задержка 1-3": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Связь конкурента и нашего sku": {
+      "main": [
+        [
+          {
+            "node": "Уникальные sku конкурентов",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Replace Me2": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Уникальные sku конкурентов": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet3": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items3": {
+      "main": [
+        [],
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Replace Me3": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger3": {
+      "main": [
+        [
+          {
+            "node": "Связь конкурента и нашего sku",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Wait5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet4": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items4": {
+      "main": [
+        [],
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Replace Me4": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Replace Me4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger2": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger4": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger5": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Settings": {
+      "main": [
+        [
+          {
+            "node": "SettingsData",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SettingsData": {
+      "main": [
+        [
+          {
+            "node": "Соколов ИП",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Промаркет",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet5": {
+      "main": [
+        [
+          {
+            "node": "Aggregate1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate1": {
+      "main": [
+        [
+          {
+            "node": "Settings",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Соколов ИП": {
+      "main": [
+        [
+          {
+            "node": "Дневные заказы",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Промаркет": {
+      "main": [
+        [
+          {
+            "node": "Дневные зaказы",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Дата вчерашнего дня": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Дневные заказы": {
+      "main": [
+        [
+          {
+            "node": "Wait3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Дневные зaказы": {
+      "main": [
+        [
+          {
+            "node": "Wait4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait5": {
+      "main": [
+        [
+          {
+            "node": "Replace Me3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger6": {
+      "main": [
+        [
+          {
+            "node": "Дата вчерашнего дня",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait3": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Moscow",
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "Op9wKW2jrSepslF4"
+  },
+  "versionId": "0e5ca5a4-6097-48b7-9196-e9a6e2a7f15a",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "821082d40069dd177dd484096f11cca7033ac3bb15485fc4b456f4d4a39e990b"
+  },
+  "id": "oOQ4Zwe25stBmqqJ",
+  "tags": []
+}
